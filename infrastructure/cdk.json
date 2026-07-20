@@ -1,0 +1,8 @@
+{
+  "app": "npx ts-node bin/app.ts",
+  "context": {
+    "env": "staging",
+    "appName": "InstaServe",
+    "region": "ap-south-1"
+  }
+}

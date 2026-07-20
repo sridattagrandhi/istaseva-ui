@@ -1,0 +1,2908 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap");
+
+.client-redesign {
+  --bg: #f6f6f8;
+  --surface: #fbfbfd;
+  --surface-strong: #ffffff;
+  --ink: #17161c;
+  --muted: #4b525c;
+  --line: rgba(23, 22, 28, 0.1);
+  --teal: #8b5e4a;
+  --teal-dark: #3a3247;
+  --teal-deep: #17141d;
+  --saffron: #bd8752;
+  --coral: #a45d62;
+  --blue: #617a92;
+  --green-soft: #f1ece9;
+  --gold-soft: #f7eee5;
+  --shadow-sm: 0 16px 44px rgba(34, 31, 39, 0.08);
+  --shadow-md: 0 28px 86px rgba(34, 31, 39, 0.16);
+  --radius-card: 8px;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.client-redesign,
+.client-redesign * {
+  box-sizing: border-box;
+}
+
+body.client-redesign-active {
+  position: relative;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Warm base end to end — the old #f1f3f7 mid-stop (cool blue-gray) read
+     as a gray box behind the discovery carousels' white cards. Mirrors the
+     same fix on the global body gradient in src/index.css. */
+  background:
+    linear-gradient(180deg, rgba(58, 50, 71, 0.1) 0, rgba(58, 50, 71, 0) 430px),
+    linear-gradient(135deg, #faf9f7 0%, #f8f5f1 45%, #fbf7f3 100%);
+}
+
+body.client-redesign-active::before {
+  position: fixed;
+  inset: -28% -18%;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 0 16%, rgba(255, 255, 255, 0.74) 18% 28%, transparent 31% 46%, rgba(189, 135, 82, 0.2) 49% 61%, transparent 64% 100%),
+    linear-gradient(32deg, rgba(97, 122, 146, 0.16), transparent 34%, rgba(164, 93, 98, 0.15) 68%, transparent);
+  filter: blur(30px);
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate(0deg);
+  animation: ambientSheet 18s ease-in-out infinite alternate;
+}
+
+body.client-redesign-active::after {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.46), transparent 72%);
+}
+
+.client-redesign button,
+.client-redesign input {
+  font: inherit;
+}
+
+.client-redesign button {
+  border: 0;
+  cursor: pointer;
+}
+
+.client-redesign button:focus-visible,
+.client-redesign input:focus-visible {
+  outline: 3px solid rgba(139, 94, 74, 0.26);
+  outline-offset: 2px;
+}
+
+.client-redesign img {
+  display: block;
+  max-width: 100%;
+}
+
+.client-redesign h1,
+.client-redesign h2,
+.client-redesign h3 {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", Inter, sans-serif;
+  letter-spacing: 0;
+}
+
+.client-redesign p {
+  margin: 0;
+}
+
+.app-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  /* Match the 1500px content shell (.section-block/.page-layout) so the nav
+     spans the same width as the page below it on large screens. */
+  width: min(1500px, calc(100% - 48px));
+  margin: 14px auto 0;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 18px 60px rgba(34, 31, 39, 0.1);
+  backdrop-filter: blur(28px) saturate(1.25);
+  overflow: hidden;
+}
+
+.topbar::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(104deg, transparent 0 22%, rgba(255, 255, 255, 0.72) 35%, transparent 48% 100%);
+  transform: translateX(-72%);
+  animation: glassSweep 9s ease-in-out infinite;
+}
+
+.topbar > * {
+  position: relative;
+  z-index: 1;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0;
+  color: var(--ink);
+  background: transparent;
+  text-align: left;
+}
+
+.brand-mark {
+  display: inline-grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.62);
+  font-weight: 800;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 12px 26px rgba(58, 50, 71, 0.14);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.brand:hover .brand-mark {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 16px 34px rgba(58, 50, 71, 0.18);
+}
+
+.logo-mark-svg {
+  width: 36px;
+  height: 36px;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 17px;
+  line-height: 1.1;
+}
+
+.brand small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.nav-pills,
+.topbar-actions,
+.hero-trust,
+.quick-paths,
+.chip-row,
+.rating-line,
+.tag-row,
+.mode-switch,
+.route-options,
+.partner-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-pills {
+  justify-content: center;
+  gap: 4px;
+}
+
+.nav-pills button,
+.language-button,
+.ghost-button,
+.solid-button,
+.filter-button,
+.partner-cta,
+.section-heading button,
+.quick-paths button,
+.chip-row button,
+.mode-switch button,
+.partner-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+/* Tactile press feedback — the stylesheet had no :active states, so clicks
+   gave no response. One shared rule covers every interactive pill. */
+.nav-pills button:active,
+.language-button:active,
+.ghost-button:active,
+.solid-button:active,
+.filter-button:active,
+.partner-cta:active,
+.section-heading button:active,
+.quick-paths button:active,
+.chip-row button:active,
+.mode-switch button:active,
+.partner-actions button:active,
+.search-tabs button:active,
+.feed-actions button:active,
+.rail-heading button:active,
+.search-cta:active,
+.pay-button:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+.nav-pills button {
+  position: relative;
+  padding: 10px 13px;
+  color: var(--muted);
+  background: transparent;
+  overflow: hidden;
+}
+
+.nav-pills button:hover,
+.nav-pills button.active {
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 8px 20px rgba(58, 50, 71, 0.08);
+}
+
+.nav-pills button::after {
+  position: absolute;
+  inset: 1px;
+  content: "";
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 0 24%, rgba(255, 255, 255, 0.74) 44%, transparent 62% 100%);
+  opacity: 0;
+  transform: translateX(-65%);
+}
+
+.nav-pills button.active::after {
+  opacity: 1;
+  animation: pillSheen 4.8s ease-in-out infinite;
+}
+
+.topbar-actions {
+  gap: 8px;
+}
+
+.language-button,
+.ghost-button {
+  padding: 9px 13px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.language-button:hover,
+.ghost-button:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(23, 22, 28, 0.18);
+}
+
+.solid-button,
+.search-cta,
+.pay-button {
+  color: #fff;
+  background: linear-gradient(135deg, #2b2436, #8b5e4a);
+  box-shadow: 0 14px 30px rgba(58, 50, 71, 0.2);
+}
+
+.solid-button {
+  padding: 9px 16px;
+}
+
+.hero-grid,
+.discovery-hero,
+.section-block,
+.page-layout {
+  width: min(1500px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 28px;
+  align-items: center;
+  padding: 54px 0 28px;
+}
+
+.discovery-hero {
+  padding: 38px 0 20px;
+}
+
+.location-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.location-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid rgba(17, 26, 22, 0.08);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 12px 28px rgba(58, 50, 71, 0.06);
+  backdrop-filter: blur(18px) saturate(1.2);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.booking-command {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 20px;
+  align-items: stretch;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.68), rgba(248, 244, 240, 0.36)),
+    conic-gradient(from 210deg at 68% 28%, rgba(255, 255, 255, 0.52), rgba(189, 135, 82, 0.22), rgba(97, 122, 146, 0.16), rgba(164, 93, 98, 0.14), rgba(255, 255, 255, 0.42));
+  background-size: 100% 100%, 180% 180%;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.94),
+    inset 0 -24px 54px rgba(255, 255, 255, 0.22),
+    0 28px 86px rgba(34, 31, 39, 0.16);
+  backdrop-filter: blur(28px) saturate(1.2);
+  overflow: hidden;
+  animation: surfaceDrift 12s ease-in-out infinite, panelSpectrum 16s ease-in-out infinite alternate;
+}
+
+.booking-command::before {
+  position: absolute;
+  inset: 1px;
+  content: "";
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.82), transparent 28%, rgba(255, 255, 255, 0.3) 62%, transparent),
+    linear-gradient(35deg, transparent 0 42%, rgba(255, 255, 255, 0.34) 52%, transparent 63% 100%);
+  mix-blend-mode: screen;
+  animation: refractDrift 8s ease-in-out infinite alternate;
+}
+
+.booking-command::after {
+  position: absolute;
+  inset: -1px;
+  content: "";
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(92deg, transparent 0 8%, rgba(255, 255, 255, 0.54) 17%, transparent 31% 100%),
+    linear-gradient(148deg, transparent 0 46%, rgba(123, 82, 68, 0.18) 58%, transparent 74% 100%);
+  transform: translateX(-35%);
+  opacity: 0.72;
+  animation: liquidGlide 11s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+}
+
+.booking-command > * {
+  position: relative;
+  z-index: 1;
+}
+
+.command-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 360px;
+  padding: 28px;
+  color: var(--ink);
+}
+
+.command-copy .eyebrow {
+  color: var(--teal-dark);
+}
+
+.command-copy h1 {
+  max-width: 620px;
+  color: var(--ink);
+  font-size: 58px;
+  line-height: 1;
+}
+
+.command-copy p {
+  max-width: 560px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.command-copy .hero-trust span {
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.56);
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+.hero-copy {
+  padding-right: 18px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--teal-dark);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-copy h1,
+.page-head h1 {
+  max-width: 720px;
+  font-size: 64px;
+  line-height: 0.95;
+}
+
+.hero-copy p,
+.page-head p,
+.partner-band p {
+  max-width: 680px;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.hero-trust {
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 26px;
+}
+
+.hero-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.glass-search-card {
+  position: relative;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 22px 70px rgba(34, 31, 39, 0.13);
+  backdrop-filter: blur(32px) saturate(1.25);
+  overflow: hidden;
+}
+
+.glass-search-card.premium {
+  align-self: center;
+  margin: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.48));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94), 0 26px 74px rgba(58, 50, 71, 0.15);
+  animation: searchGlassBreathe 7s ease-in-out infinite;
+}
+
+.glass-search-card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.78), transparent 28% 64%, rgba(255, 255, 255, 0.34)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.32), transparent);
+  opacity: 0.65;
+  transform: translateY(-18%);
+}
+
+.glass-search-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-search-card.premium .search-form {
+  grid-template-columns: 1fr 1fr;
+}
+
+.glass-search-card.premium .search-form label:first-child,
+.glass-search-card.premium .search-cta {
+  grid-column: 1 / -1;
+}
+
+.search-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.search-tabs button {
+  min-height: 44px;
+  border-radius: 12px;
+  color: var(--muted);
+  background: transparent;
+  font-weight: 800;
+}
+
+.search-tabs button.active {
+  color: #fff;
+  background: linear-gradient(135deg, #2f293b, #7b5244);
+  box-shadow: 0 12px 24px rgba(58, 50, 71, 0.16);
+}
+
+.search-form {
+  display: grid;
+  gap: 13px;
+  margin-top: 14px;
+}
+
+.search-form label span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--teal);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.field:hover,
+.field:focus-within {
+  border-color: rgba(139, 94, 74, 0.24);
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.96), 0 10px 24px rgba(58, 50, 71, 0.08);
+  transform: translateY(-1px);
+}
+
+.field.wide {
+  min-width: min(520px, 100%);
+}
+
+.field input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: var(--ink);
+  background: transparent;
+}
+
+.field input::placeholder {
+  color: rgba(101, 114, 109, 0.78);
+}
+
+.search-cta,
+.pay-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 52px;
+  border-radius: 16px;
+  font-weight: 800;
+}
+
+.search-cta::after,
+.pay-button::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 0 28%, rgba(255, 255, 255, 0.46) 45%, transparent 62% 100%);
+  transform: translateX(-80%);
+}
+
+.search-cta:hover::after,
+.pay-button:hover::after {
+  animation: buttonSheen 900ms ease forwards;
+}
+
+.search-cta:hover,
+.pay-button:hover,
+.solid-button:hover,
+.partner-cta:hover {
+  transform: translateY(-1px);
+}
+
+.quick-paths {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.quick-paths button {
+  padding: 8px 11px;
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.quick-paths button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.96), 0 10px 22px rgba(58, 50, 71, 0.08);
+}
+
+.premium-showcase {
+  display: grid;
+  grid-template-columns: 1.25fr 0.875fr 0.875fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.showcase-tile {
+  position: relative;
+  min-height: 198px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 14px;
+  color: #fff;
+  background: var(--teal-deep);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  transition: transform 260ms ease, box-shadow 260ms ease;
+  animation: tileSettle 700ms ease both;
+}
+
+.showcase-tile.large {
+  min-height: 228px;
+}
+
+.showcase-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.showcase-tile:hover img {
+  transform: scale(1.05);
+}
+
+.showcase-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 74px rgba(34, 31, 39, 0.16);
+}
+
+.showcase-tile::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(23, 20, 29, 0.04) 0%, rgba(23, 20, 29, 0.72) 100%);
+}
+
+.showcase-tile::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(112deg, transparent 0 22%, rgba(255, 255, 255, 0.34) 38%, transparent 54% 100%);
+  opacity: 0;
+  transform: translateX(-62%);
+}
+
+.showcase-tile:hover::before {
+  opacity: 1;
+  animation: tileGlint 1200ms ease forwards;
+}
+
+.showcase-tile span,
+.showcase-tile strong {
+  position: absolute;
+  z-index: 1;
+  left: 16px;
+  right: 16px;
+}
+
+.showcase-tile span {
+  bottom: 54px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.showcase-tile strong {
+  bottom: 18px;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.discovery-feed {
+  /* Same shell as .section-block/.page-layout — the feed used to cap at
+     1200px and float in dead space on wide monitors. */
+  width: min(1500px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 36px 0 28px;
+}
+
+.feed-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.feed-header h1 {
+  max-width: 780px;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.02;
+}
+
+.feed-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.feed-actions button:hover,
+.rail-heading button:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(23, 22, 28, 0.18);
+  transform: translateY(-1px);
+}
+
+.feed-actions button,
+.rail-heading button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 12px 28px rgba(58, 50, 71, 0.06);
+  backdrop-filter: blur(18px) saturate(1.2);
+  font-weight: 800;
+}
+
+.horizontal-rail {
+  position: relative;
+  margin-top: 26px;
+}
+
+/* The frosted ::before panel that used to sit behind each rail's cards was
+   removed per product feedback — it read as a stray gray box. Cards float
+   directly on the page background now (matching the desktop carousels). */
+
+.rail-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.rail-heading p {
+  margin-bottom: 4px;
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.rail-heading h2 {
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.rail-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(294px, 330px);
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 6px 2px 18px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.rail-scroller::-webkit-scrollbar {
+  height: 8px;
+}
+
+.rail-scroller::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(58, 50, 71, 0.16);
+}
+
+.discovery-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* Buttons shrink-to-fit their content by default, so a tile would size to
+     its longest unwrappable line (a full street address) instead of its
+     carousel cell — overflowing into the next card. Fill the cell and let the
+     .one-line spans ellipsize (same fix as .stay-card). */
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  /* Height fits the content (clamped title/address keep it uniform per rail),
+     so shorter cards don't leave dead space above the footer. Cells align to
+     the top (see .carousel-track) rather than stretching. */
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 18px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94), 0 16px 44px rgba(34, 31, 39, 0.08);
+  backdrop-filter: blur(24px) saturate(1.16);
+  text-align: left;
+  scroll-snap-align: start;
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+  animation: tileSettle 620ms ease both;
+}
+
+.discovery-tile:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), 0 26px 70px rgba(34, 31, 39, 0.14);
+}
+
+.discovery-tile::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 0 30%, rgba(255, 255, 255, 0.42) 45%, transparent 58% 100%);
+  opacity: 0;
+  transform: translateX(-70%);
+}
+
+.discovery-tile:hover::after {
+  opacity: 1;
+  animation: tileGlint 1100ms ease forwards;
+}
+
+.discovery-tile > img {
+  width: 100%;
+  height: 200px;
+  flex: 0 0 auto;
+  object-fit: cover;
+}
+
+/* Services and transport use a slightly shorter photo than stays. Transport is
+   shortest since its card also carries a tag row. */
+.service-tile > img {
+  height: 180px;
+}
+
+.transport-tile > img {
+  height: 150px;
+}
+
+/* One-line text with a trailing ellipsis that softly fades out. Used for
+   card titles and address/secondary lines so long values truncate cleanly
+   to a single line instead of wrapping and throwing off card alignment.
+   The mask only affects glyphs that actually reach the right edge — short
+   text leaves the trailing zone empty, so it isn't dimmed. */
+.one-line {
+  display: block;
+  min-width: 0;
+  /* Inside a flex row (.tile-content p) a span shrink-fits its text, which
+     parks the mask's trailing fade ON the last glyph even for short values
+     ("Maruti Eeco" lost its final letter). Stretching to the leftover row
+     width keeps short text out of the fade zone; block contexts ignore flex.
+     Safe because .one-line is always the row's last child. */
+  flex: 1 1 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 13px), rgba(0, 0, 0, 0.45));
+  mask-image: linear-gradient(to right, #000 calc(100% - 13px), rgba(0, 0, 0, 0.45));
+}
+
+.rank-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(47, 41, 59, 0.66);
+  backdrop-filter: blur(12px);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.tile-content {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  flex-direction: column;
+  padding: 14px;
+}
+
+.tile-content h3 {
+  margin-top: 8px;
+  font-size: 19px;
+  line-height: 1.16;
+}
+
+.tile-content p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tile-footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  /* Cards are content-fit now, so a fixed gap (rather than auto) keeps a little
+     breathing room between the last content row and the divider. */
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(23, 22, 28, 0.08);
+}
+
+/* Keep the price hard-right even when a tile has no left-hand meta item
+   (e.g. stays, whose type now lives in a body pill rather than the footer). */
+.tile-footer strong {
+  margin-left: auto;
+}
+
+.tile-footer span,
+.tile-meta-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tile-footer strong {
+  color: var(--ink);
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.tile-footer small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.tile-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tag-row.compact {
+  margin-top: 12px;
+}
+
+.section-block {
+  padding: 34px 0;
+}
+
+.discovery-split {
+  display: grid;
+  grid-template-columns: 1fr 430px;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.section-heading p {
+  margin-bottom: 4px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-heading h2,
+.partner-band h2 {
+  font-size: 38px;
+}
+
+.section-heading button {
+  padding: 9px 13px;
+  color: var(--teal-dark);
+  background: var(--green-soft);
+}
+
+.discovery-cards,
+.service-strip,
+.transport-preview-grid,
+.three-lanes,
+.stay-grid,
+.service-grid,
+.transport-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.discovery-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.media-card,
+.service-mini,
+.transport-mini,
+.lane-panel,
+.stay-card,
+.service-card,
+.transport-card,
+.booking-panel,
+.toolbar-card,
+.route-form-card {
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: var(--radius-card);
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), var(--shadow-sm);
+  backdrop-filter: blur(22px) saturate(1.16);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease, background 240ms ease;
+}
+
+.media-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 240px;
+  padding: 0;
+  text-align: left;
+}
+
+.media-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.media-card div {
+  padding: 14px;
+}
+
+.media-card h3,
+.service-mini h3,
+.transport-mini h3,
+.lane-panel h3,
+.stay-card h3,
+.service-card h3,
+.transport-card h3 {
+  font-size: 17px;
+}
+
+.media-card p,
+.service-mini p,
+.transport-mini p,
+.lane-panel p,
+.stay-card p,
+.service-card p,
+.transport-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(47, 41, 59, 0.86);
+  font-size: 12px;
+  font-weight: 800;
+  backdrop-filter: blur(8px);
+}
+
+.map-showcase {
+  min-height: 374px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(26px) saturate(1.2);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.map-showcase:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 32px 88px rgba(34, 31, 39, 0.16);
+}
+
+.map-showcase.compact {
+  min-height: 338px;
+}
+
+.map-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.map-topbar span,
+.map-topbar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.map-topbar button {
+  padding: 8px 10px;
+  border-radius: 999px;
+  color: var(--teal-dark);
+  background: var(--green-soft);
+}
+
+.map-canvas {
+  position: relative;
+  min-height: 315px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(58, 50, 71, 0.06) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(58, 50, 71, 0.06) 1px, transparent 1px),
+    linear-gradient(135deg, #f8f6f4 0%, #eef2f6 100%);
+  background-size: 42px 42px, 42px 42px, 100% 100%;
+  animation: mapSurface 18s linear infinite;
+}
+
+.road {
+  position: absolute;
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(58, 50, 71, 0.09);
+}
+
+.road-a {
+  left: -10%;
+  top: 48%;
+  width: 125%;
+  transform: rotate(-14deg);
+}
+
+.road-b {
+  left: 12%;
+  top: 10%;
+  width: 95%;
+  transform: rotate(36deg);
+}
+
+.road-c {
+  left: -12%;
+  bottom: 19%;
+  width: 100%;
+  transform: rotate(18deg);
+}
+
+.pin {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 3px solid #fff;
+  border-radius: 999px;
+  color: #fff;
+  box-shadow: 0 15px 30px rgba(22, 33, 29, 0.18);
+  animation: mapPulse 2.8s ease-in-out infinite;
+}
+
+.pin.stay {
+  top: 23%;
+  left: 17%;
+  background: var(--teal);
+}
+
+.pin.service {
+  top: 51%;
+  right: 22%;
+  background: var(--coral);
+  animation-delay: 0.3s;
+}
+
+.pin.transport {
+  bottom: 21%;
+  left: 43%;
+  background: var(--blue);
+  animation-delay: 0.6s;
+}
+
+.pin.landmark {
+  top: 18%;
+  right: 28%;
+  background: var(--saffron);
+  animation-delay: 0.9s;
+}
+
+@keyframes mapPulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.03);
+  }
+}
+
+@keyframes ambientSheet {
+  from {
+    transform: translate3d(-2%, -1%, 0) rotate(-2deg) scale(1.02);
+  }
+  to {
+    transform: translate3d(2%, 1.5%, 0) rotate(2deg) scale(1.05);
+  }
+}
+
+@keyframes glassSweep {
+  0%,
+  42% {
+    transform: translateX(-78%);
+    opacity: 0;
+  }
+  52% {
+    opacity: 0.65;
+  }
+  72%,
+  100% {
+    transform: translateX(78%);
+    opacity: 0;
+  }
+}
+
+@keyframes pillSheen {
+  0%,
+  62% {
+    transform: translateX(-72%);
+  }
+  100% {
+    transform: translateX(74%);
+  }
+}
+
+@keyframes surfaceDrift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes panelSpectrum {
+  from {
+    background-position: 0 0, 0% 50%;
+  }
+  to {
+    background-position: 0 0, 100% 46%;
+  }
+}
+
+@keyframes refractDrift {
+  from {
+    opacity: 0.48;
+    transform: translateX(-1.5%) skewX(-1deg);
+  }
+  to {
+    opacity: 0.82;
+    transform: translateX(1.5%) skewX(1deg);
+  }
+}
+
+@keyframes liquidGlide {
+  0% {
+    transform: translateX(-45%);
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.58;
+  }
+  62% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(42%);
+    opacity: 0;
+  }
+}
+
+@keyframes buttonSheen {
+  to {
+    transform: translateX(82%);
+  }
+}
+
+@keyframes searchGlassBreathe {
+  0%,
+  100% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94), 0 26px 74px rgba(58, 50, 71, 0.15);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.98), 0 30px 86px rgba(58, 50, 71, 0.18);
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes tileGlint {
+  to {
+    transform: translateX(66%);
+  }
+}
+
+@keyframes tileSettle {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes mapSurface {
+  from {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 42px 42px, -42px 42px, 0 0;
+  }
+}
+
+@keyframes cardHover {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes panelRise {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.map-card {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(12px);
+  animation: cardHover 5.2s ease-in-out infinite;
+}
+
+.map-card strong {
+  font-size: 13px;
+}
+
+.map-card span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.stay-card-map {
+  left: 52px;
+  bottom: 48px;
+}
+
+.route-card-map {
+  right: 30px;
+  top: 82px;
+}
+
+.three-lanes {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.lane-panel {
+  min-height: 230px;
+  padding: 22px;
+  color: inherit;
+  text-align: left;
+}
+
+.lane-panel:hover,
+.stay-card:hover,
+.service-card:hover,
+.transport-card:hover,
+.service-mini:hover,
+.transport-mini:hover,
+.media-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.96), var(--shadow-md);
+}
+
+.lane-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 28px;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--teal-dark);
+  background: var(--green-soft);
+}
+
+.lane-panel:nth-child(2) .lane-icon {
+  color: var(--coral);
+  background: #fae9e3;
+}
+
+.lane-panel:nth-child(3) .lane-icon {
+  color: var(--blue);
+  background: #e7eef7;
+}
+
+.lane-panel p {
+  margin-top: 8px;
+  min-height: 62px;
+}
+
+.lane-panel > span:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  color: var(--teal-dark);
+  font-weight: 800;
+}
+
+.service-strip {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.service-mini,
+.transport-mini {
+  overflow: hidden;
+  padding: 0;
+  color: inherit;
+  text-align: left;
+}
+
+.service-mini img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.service-mini span,
+.service-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.service-mini > span,
+.service-mini h3,
+.service-mini p,
+.service-mini strong {
+  margin-inline: 14px;
+}
+
+.service-mini > span {
+  margin-top: 14px;
+}
+
+.service-mini h3 {
+  margin-top: 8px;
+}
+
+.service-mini strong {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-size: 17px;
+}
+
+.transport-preview-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.transport-mini {
+  display: grid;
+  grid-template-columns: 92px 1fr auto;
+  gap: 13px;
+  align-items: center;
+  min-height: 112px;
+  padding: 10px;
+}
+
+.transport-mini img {
+  width: 92px;
+  height: 92px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.transport-mini span {
+  display: inline-block;
+  margin-bottom: 3px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.transport-mini strong {
+  color: var(--teal-dark);
+  white-space: nowrap;
+}
+
+.partner-band {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+  width: min(1500px, calc(100% - 48px));
+  margin: 20px auto 70px;
+  padding: 28px;
+  border: 1px solid rgba(139, 94, 74, 0.18);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(58, 50, 71, 0.1), rgba(189, 135, 82, 0.16));
+}
+
+.partner-actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.partner-actions button,
+.partner-cta {
+  padding: 10px 14px;
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow-sm);
+}
+
+.page-layout {
+  padding: 48px 0 78px;
+}
+
+.page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.page-head h1 {
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.08;
+}
+
+.page-head p {
+  font-size: 16px;
+}
+
+.toolbar-card {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(16px);
+}
+
+/* Search grows to fill the wider toolbar; the date/guest/near/sort/filter
+   controls keep their natural width beside it. On very tight widths the
+   controls wrap to a second row (flex-wrap above) rather than overflow. */
+.toolbar-card .field.wide {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.filter-button {
+  min-width: fit-content;
+  min-height: 46px;
+  padding: 0 14px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+/* Recent-search recall chips — sit just under the toolbar. Each chip is a
+   pill with a tap-to-recall body and a small remove (×) affordance. */
+/* One shared row for the active location-scope pill + the recent-search
+   recall chips, so the two never stack into clashing strips. The strip owns
+   the vertical rhythm; children reset their own margins. Collapses entirely
+   when neither renders. */
+.context-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: -6px 0 18px;
+}
+
+.context-strip:empty {
+  display: none;
+}
+
+.context-strip .recent-searches {
+  margin: 0;
+}
+
+/* Active location scope — dark gradient pill, same treatment as a selected
+   mode chip, so it unmistakably reads "this filter is APPLIED" next to the
+   faded recall chips. */
+.scope-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 7px 7px 13px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2b2436 0%, #7b5244 60%, #8b5e4a 100%);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(58, 50, 71, 0.18);
+}
+
+.scope-chip-clear {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.72);
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.scope-chip-clear:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.recent-searches {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -6px 0 18px;
+}
+
+.recent-searches-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted, #8a8275);
+  opacity: 0.7;
+}
+
+/* Recall chips are FADED at rest — they're suggestions, not applied filters
+   (the applied one is the dark .scope-chip beside them). Hover/focus lifts a
+   chip back to full strength so it still feels tappable. */
+.recent-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: none;
+  opacity: 0.62;
+  transition: opacity 160ms ease, background 160ms ease, box-shadow 160ms ease;
+  overflow: hidden;
+}
+
+.recent-chip:hover,
+.recent-chip:focus-within {
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  opacity: 1;
+}
+
+.recent-chip-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px 7px 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--muted, #8a8275);
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.recent-chip:hover .recent-chip-main,
+.recent-chip:focus-within .recent-chip-main {
+  color: var(--ink);
+}
+
+.recent-chip-main:hover {
+  background: var(--muted-bg, rgba(0, 0, 0, 0.04));
+}
+
+.recent-chip-remove {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  align-self: stretch;
+  color: var(--muted, #8a8275);
+  border-left: 1px solid var(--line);
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.recent-chip-remove:hover {
+  background: var(--muted-bg, rgba(0, 0, 0, 0.04));
+  color: var(--ink);
+}
+
+.recent-clear {
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted, #8a8275);
+  text-underline-offset: 2px;
+}
+
+.recent-clear:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.content-with-panel {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 18px;
+  align-items: start;
+}
+
+.chip-row {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chip-row button {
+  padding: 9px 13px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+}
+
+.chip-row button.active {
+  color: #fff;
+  background: var(--teal-dark);
+}
+
+.stay-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.stay-card,
+.service-card,
+.transport-card {
+  overflow: hidden;
+  color: inherit;
+  text-align: left;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+/* The stays-list card is a <button>, which defaults to inline-block and so
+   sizes to its content. Once titles/addresses became single-line (nowrap),
+   that let each card collapse/stretch to its longest line and break the
+   grid. Force it to fill its grid cell so cards stay uniform and the
+   .one-line ellipsis truncates within the cell. (service/transport cards
+   are display:grid already, so they fill width on their own.) */
+.stay-card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.stay-card.selected,
+.service-card.selected,
+.transport-card.selected {
+  border-color: rgba(139, 94, 74, 0.5);
+  box-shadow: 0 0 0 3px rgba(139, 94, 74, 0.13), var(--shadow-md);
+}
+
+.stay-image-wrap {
+  position: relative;
+  height: 210px;
+}
+
+.stay-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stay-image-wrap > span {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(47, 41, 59, 0.85);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Heart/save control over the card image. Service + transport cards render it
+   as a span[role=button] (.save-heart) because their card root is already a
+   <button> — the left/padding resets below undo the category-pill styling the
+   `> span` rule above would otherwise give that span. */
+.stay-image-wrap button,
+.stay-image-wrap .save-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: auto;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+/* Grid/flex children default to min-width:auto, which lets long titles and
+   addresses blow past their column instead of truncating. Allow the
+   .one-line ellipsis+fade to take effect inside the list-page cards. */
+.card-body,
+.service-card > div,
+.transport-card > div {
+  min-width: 0;
+}
+
+.stay-card p,
+.service-card p,
+.transport-card p {
+  min-width: 0;
+}
+
+.rating-line {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.rating-line strong,
+.verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--teal-dark);
+}
+
+.verified {
+  color: #13845f;
+  font-weight: 800;
+}
+
+.stay-card p,
+.service-card p,
+.transport-card p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.tag-row {
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.tag-row span {
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: var(--teal-dark);
+  background: var(--green-soft);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.price-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.price-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.price-row strong {
+  font-size: 20px;
+}
+
+.price-row small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.booking-panel {
+  position: sticky;
+  top: 96px;
+  padding: 16px;
+}
+
+.booking-panel h2 {
+  margin-top: 14px;
+  font-size: 22px;
+}
+
+.booking-panel p,
+.booking-panel small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.panel-image {
+  position: relative;
+  overflow: hidden;
+  height: 165px;
+  border-radius: 8px;
+}
+
+.panel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.panel-image span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(47, 41, 59, 0.86);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.panel-title-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--teal-dark);
+  background: var(--green-soft);
+}
+
+.booking-steps,
+.bill-box {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.booking-steps div,
+.bill-box div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px;
+  border-radius: 8px;
+  background: #f7f5ee;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.booking-steps div {
+  justify-content: flex-start;
+  color: var(--ink);
+}
+
+.booking-steps svg {
+  color: var(--teal);
+}
+
+.bill-box .total {
+  color: var(--ink);
+  background: var(--gold-soft);
+  font-size: 15px;
+}
+
+.pay-button {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.mode-switch {
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.mode-switch button {
+  padding: 11px 14px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+}
+
+.mode-switch button.active {
+  color: #fff;
+  background: var(--teal-dark);
+  box-shadow: 0 10px 24px rgba(58, 50, 71, 0.18);
+}
+
+.service-grid {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* Services + transport reuse the stays card anatomy (.stay-image-wrap +
+   .card-body + .price-row) so all three list cards share one visual system.
+   These buttons only need to fill their grid cell, like .stay-card does. */
+.service-card,
+.transport-card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.meta-grid span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.transport-builder {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.route-form-card {
+  display: grid;
+  gap: 13px;
+  padding: 18px;
+}
+
+.route-form-card h2 {
+  font-size: 24px;
+}
+
+.route-options {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.route-options span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  color: var(--teal-dark);
+  background: var(--green-soft);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.transport-grid {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+@media (max-width: 1040px) {
+  .topbar {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-pills {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .topbar-actions {
+    display: none;
+  }
+
+  .hero-grid,
+  .booking-command,
+  .discovery-split,
+  .content-with-panel,
+  .transport-builder,
+  .partner-band {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-panel {
+    position: static;
+  }
+
+  .command-copy h1,
+  .hero-copy h1 {
+    font-size: 48px;
+  }
+
+  .section-heading h2,
+  .partner-band h2 {
+    font-size: 34px;
+  }
+
+  .discovery-cards,
+  .three-lanes,
+  .service-strip,
+  .transport-preview-grid,
+  .premium-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar,
+  .hero-grid,
+  .discovery-hero,
+  .discovery-feed,
+  .section-block,
+  .page-layout,
+  .partner-band {
+    width: min(100% - 20px, 1200px);
+  }
+
+  /* The decorative rail panel bleeds -12px each side; the mobile gutter is
+     only 10px, so keep it inside the container to avoid horizontal overflow. */
+  .horizontal-rail::before {
+    inset: 50px 0 0;
+  }
+
+  .topbar {
+    margin-top: 10px;
+    border-radius: 12px;
+  }
+
+  .brand small,
+  .nav-pills svg {
+    display: none;
+  }
+
+  .nav-pills button {
+    padding: 9px 11px;
+    font-size: 13px;
+  }
+
+  .hero-grid {
+    padding-top: 32px;
+  }
+
+  .booking-command {
+    gap: 10px;
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  .command-copy {
+    min-height: auto;
+    padding: 22px 14px;
+  }
+
+  .command-copy h1 {
+    font-size: 34px;
+    line-height: 1.02;
+  }
+
+  .command-copy p {
+    font-size: 15px;
+  }
+
+  .glass-search-card.premium {
+    margin: 0;
+  }
+
+  .glass-search-card.premium .search-form {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding-right: 0;
+  }
+
+  .hero-copy h1 {
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  .glass-search-card,
+  .map-showcase,
+  .partner-band {
+    border-radius: 12px;
+  }
+
+  .discovery-cards,
+  .three-lanes,
+  .service-strip,
+  .transport-preview-grid,
+  .premium-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-tile,
+  .showcase-tile.large {
+    min-height: 210px;
+  }
+
+  .section-heading,
+  .feed-header,
+  .rail-heading,
+  .page-head,
+  .toolbar-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .feed-header h1 {
+    font-size: 34px;
+  }
+
+  .rail-heading h2 {
+    font-size: 24px;
+  }
+
+  .rail-scroller {
+    grid-auto-columns: minmax(276px, 84vw);
+  }
+
+  .discovery-tile {
+    min-height: 370px;
+  }
+
+  .toolbar-card {
+    display: grid;
+  }
+
+  .field.wide {
+    min-width: 100%;
+  }
+
+  .transport-mini {
+    grid-template-columns: 1fr;
+  }
+
+  .transport-mini img {
+    width: 100%;
+    height: 190px;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-actions {
+    justify-content: flex-start;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.coming-soon-pill {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f7e8d7 0%, #f3c98e 100%);
+  color: #5b3a1c;
+  border: 1px solid rgba(91, 58, 28, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.coming-soon-callout {
+  text-align: center;
+  padding: 48px 24px;
+}
+.coming-soon-callout h3 {
+  font-family: var(--font-display, inherit);
+  font-size: 18px;
+  font-weight: 800;
+  margin: 12px 0 6px;
+  color: var(--foreground, #2b2436);
+}
+.coming-soon-callout p {
+  color: var(--muted, #7a7283);
+  font-size: 13px;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+/* Assistant "show me X on the page" highlight — Ista AI scrolls a card into
+   view and flashes it (highlightMarketplaceCard in src/lib/marketplace-agent-bus.ts).
+   A ring + soft glow that fades, so the user's eye lands on the card the
+   assistant just pointed out. */
+@keyframes mpCardFlash {
+  0%   { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.0); }
+  15%  { box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.55), 0 10px 30px rgba(124, 58, 237, 0.25); }
+  100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.0); }
+}
+.mp-card-flash {
+  animation: mpCardFlash 2.1s ease-out;
+  border-radius: 16px;
+  outline: none;
+}
+
+/* ---- Discovery: featured stay hero ---- */
+.featured-stay {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94), var(--shadow-sm);
+  backdrop-filter: blur(24px) saturate(1.16);
+}
+
+.featured-media {
+  position: relative;
+  /* Fixed height so all three "of the week" slides are the same size
+     regardless of each photo's aspect ratio. */
+  height: 380px;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Foreground: the whole photo, uncropped ("zoom out" to fit). */
+.featured-media-fg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Backdrop: a blurred, cover-cropped copy that fills the letterbox bands. */
+.featured-media-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(30px) saturate(1.25);
+  transform: scale(1.2);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(47, 41, 59, 0.66);
+  backdrop-filter: blur(12px);
+  font-size: 12.5px;
+  font-weight: 800;
+}
+
+.featured-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 32px;
+}
+
+.featured-panel .rail-eyebrow {
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* "… of the week" label on the left, carousel controls on the right. */
+.featured-eyebrow-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.featured-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.featured-nav > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(58, 50, 71, 0.16);
+  border-radius: 999px;
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.featured-nav > button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.featured-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.featured-dots button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(58, 50, 71, 0.24);
+  cursor: pointer;
+  transition: width 220ms ease, background 220ms ease;
+}
+
+.featured-dots button.active {
+  width: 22px;
+  background: var(--teal-dark);
+}
+
+.featured-panel .rating-line {
+  margin-bottom: 12px;
+}
+
+.featured-panel h2 {
+  margin-bottom: 10px;
+  font-size: 34px;
+  line-height: 1.08;
+}
+
+.featured-loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.featured-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.featured-price {
+  font-size: 30px;
+  color: var(--ink);
+}
+
+.featured-price small {
+  margin-left: 2px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.book-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--teal-dark);
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(58, 50, 71, 0.22);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.book-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(58, 50, 71, 0.28);
+}
+
+/* ---- Discovery: stays carousel ---- */
+.carousel-section {
+  margin-top: 26px;
+}
+
+.carousel-arrows {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.carousel-arrows button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 12px 28px rgba(58, 50, 71, 0.06);
+  backdrop-filter: blur(18px) saturate(1.2);
+  cursor: pointer;
+  transition: transform 160ms ease;
+}
+
+.carousel-arrows button:hover {
+  transform: translateY(-2px);
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  padding: 6px 0 4px;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: flex-start;
+  transition: transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.carousel-cell {
+  box-sizing: border-box;
+  /* Flex items default to min-width:auto, so a card with a long unwrappable
+     line (e.g. a full street address) would blow past its flex-basis and
+     break the translateX paging math. */
+  min-width: 0;
+  padding: 0 7px;
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.carousel-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(58, 50, 71, 0.22);
+  cursor: pointer;
+  transition: width 220ms ease, background 220ms ease;
+}
+
+.carousel-dots button.active {
+  width: 26px;
+  background: var(--teal-dark);
+}
+
+/* Heading right-side cluster: "View all" link + carousel arrows together. */
+.rail-heading-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* "View all →" reads as an underlined text link (no pill / frosted background),
+   turning brown on hover. */
+.rail-heading .rail-action {
+  min-height: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  color: var(--teal-dark);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.rail-heading .rail-action:hover,
+.rail-heading .rail-action:focus-visible {
+  color: var(--teal);
+  background: none;
+  box-shadow: none;
+}
+
+/* Bullet separators between the rating and the meta items on discovery cards
+   (e.g. "4.8 · 126 reviews · At home"). Scoped to the tiles so the featured
+   hero's rating line keeps its plain spacing. */
+.tile-content .rating-line strong ~ span::before {
+  content: "·";
+  margin-right: 8px;
+  color: var(--muted);
+}
+
+/* ---- Discovery: compact service cards ---- */
+.services-section {
+  margin-top: 30px;
+}
+
+.compact-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.compact-service {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94), var(--shadow-sm);
+  backdrop-filter: blur(24px) saturate(1.16);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.compact-service:hover {
+  transform: translateY(-3px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), var(--shadow-md);
+}
+
+.compact-service > img {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.compact-service-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.compact-service-body h3 {
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.compact-service-body strong {
+  margin-top: 2px;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .featured-stay {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-media {
+    height: 220px;
+  }
+
+  .compact-service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Slim legal footer on redesign pages (the global Footer is suppressed here) */
+.legal-footer {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px 24px 96px;
+  border-top: 1px solid var(--line, rgba(23, 22, 28, 0.08));
+}
+.legal-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  justify-content: center;
+  /* Breathing room before the copyright band's hairline (padding, not
+     margin — `.client-redesign *` zeroes margins). */
+  padding-bottom: 16px;
+}
+.legal-footer-links a {
+  font-size: 13px;
+  color: var(--muted, #6f6a78);
+  text-decoration: none;
+}
+.legal-footer-links a:hover {
+  color: var(--ink, #17161c);
+  text-decoration: underline;
+}
+.legal-footer-copy {
+  /* Clearly separated from the links row above — the copyright line reads
+     as its own quiet band, not a tag on the last link. Spacing lives in
+     PADDING: `.client-redesign *` zeroes margins, so margin-top is inert. */
+  padding-top: 22px;
+  margin-top: 14px;
+  border-top: 1px solid var(--line, rgba(23, 22, 28, 0.06));
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted, #6f6a78);
+  opacity: 0.75;
+}

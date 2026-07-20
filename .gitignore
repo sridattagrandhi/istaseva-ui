@@ -1,0 +1,78 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.local-uploads
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Env files — NEVER commit real env files. Copy .env.example and fill locally.
+.env
+.env.*
+!.env.example
+server/.env
+server/.env.*
+!server/.env.example
+mobile/.env
+mobile/.env.*
+!mobile/.env.example
+
+# Secrets / credentials
+service-account.json
+firebase-service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+google-services.json
+GoogleService-Info.plist
+# …except the mobile CLIENT config under mobile/firebase/: those are public
+# identifiers (same values app.config.ts already commits), not secrets, and the
+# native build is unreproducible without them. firebase-service-account*.json
+# (the real server-side secret) stays ignored above.
+!mobile/firebase/google-services.json
+!mobile/firebase/**/GoogleService-Info.plist
+
+# AWS CDK
+infrastructure/cdk.out/
+infrastructure/dist/
+infrastructure/cdk-deploy-outputs.json
+infrastructure/cdk.context.json
+cdk.out/
+
+# Build artifacts
+server/dist/
+mobile/dist/
+.expo/
+build/
+
+# Test / coverage
+coverage/
+playwright-report/
+test-results/
+.nyc_output/
+
+# Kept local only — not yet ready to ship through git/CI
+.github/workflows/
+
+# Claude Code session artifacts (worktrees, scheduled tasks)
+.claude/scheduled_tasks.lock
+.claude/worktrees/
+sbom/

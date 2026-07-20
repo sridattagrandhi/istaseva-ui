@@ -1,0 +1,6 @@
+# Stronger NSFW backend: Falconsai/nsfw_image_detection (ViT) via transformers.
+# Install on top of requirements.txt to enable NSFW_BACKEND=falconsai (or "auto").
+# CPU-only torch keeps this lighter; drop the --extra-index-url for GPU.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.1
+transformers>=4.40

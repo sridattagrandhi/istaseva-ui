@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "frontend",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vite", "--port", "5299"],
+      "port": 5299,
+      "autoPort": false
+    },
+    {
+      "name": "frontend-alt",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vite", "--port", "5301"],
+      "port": 5301,
+      "autoPort": false
+    },
+    {
+      "name": "frontend-alt2",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vite", "--port", "5303"],
+      "port": 5303,
+      "autoPort": false
+    },
+    {
+      "name": "mobile-web",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-lc", "cd mobile && npx expo start --web --port 8082 --clear"],
+      "port": 8082,
+      "autoPort": false
+    }
+  ]
+}

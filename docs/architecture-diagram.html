@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>InstaServe — Architecture Diagram</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+  :root { --bg:#0b1220; --panel:#111a2e; --ink:#e6eefc; --muted:#8aa0c4; --accent:#5aa6ff; }
+  html,body { margin:0; padding:0; background:var(--bg); color:var(--ink);
+              font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Segoe UI,Inter,Arial,sans-serif; }
+  header { padding:24px 32px 8px; }
+  header h1 { margin:0 0 6px; font-size:22px; }
+  header p  { margin:0; color:var(--muted); font-size:13px; }
+  .wrap { padding:16px 24px 48px; }
+  .card { background:var(--panel); border:1px solid #1f2a44; border-radius:12px;
+          padding:16px; margin-bottom:20px; overflow-x:auto; }
+  .legend { display:flex; flex-wrap:wrap; gap:12px; font-size:12px; color:var(--muted); }
+  .legend span { display:inline-flex; align-items:center; gap:6px; }
+  .dot { width:10px; height:10px; border-radius:2px; display:inline-block; }
+  .controls { display:flex; gap:8px; margin-bottom:12px; }
+  .controls button { background:#1a2643; color:var(--ink); border:1px solid #2a3a63;
+                     border-radius:8px; padding:6px 12px; cursor:pointer; font-size:12px; }
+  .controls button:hover { border-color:var(--accent); }
+  h2 { font-size:16px; margin:24px 0 8px; }
+  code { background:#0a1426; padding:1px 6px; border-radius:4px; color:#c8d8f5; font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>InstaServe / istaseva — System Architecture</h1>
+  <p>Modular monolith on AWS (ap-south-1). Web + Mobile clients → Express API on ECS Fargate → Postgres / Redis / DynamoDB / OpenSearch / S3, with Razorpay, Firebase, Gemini, and SES/SNS integrations.</p>
+</header>
+
+<div class="wrap">
+  <div class="controls">
+    <button onclick="document.body.requestFullscreen()">Fullscreen</button>
+    <button onclick="window.print()">Print / Save PDF</button>
+  </div>
+
+  <div class="card">
+    <div class="legend">
+      <span><i class="dot" style="background:#3b82f6"></i> Clients</span>
+      <span><i class="dot" style="background:#0ea5e9"></i> AWS edge</span>
+      <span><i class="dot" style="background:#10b981"></i> Compute</span>
+      <span><i class="dot" style="background:#f59e0b"></i> Data stores</span>
+      <span><i class="dot" style="background:#a78bfa"></i> Async / messaging</span>
+      <span><i class="dot" style="background:#ef4444"></i> External services</span>
+      <span><i class="dot" style="background:#64748b"></i> Secrets</span>
+    </div>
+  </div>
+
+  <div class="card">
+<pre class="mermaid">
+%%{init: {
+  "theme":"base",
+  "themeVariables":{"background":"#111a2e","primaryColor":"#1a2643","primaryTextColor":"#e6eefc",
+    "primaryBorderColor":"#3b5a92","lineColor":"#6b86b8","fontSize":"14px"},
+  "flowchart":{"curve":"basis","htmlLabels":true,"nodeSpacing":40,"rankSpacing":55}
+}}%%
+flowchart TB
+
+  subgraph CLIENTS["👥 Clients"]
+    direction LR
+    Web["🌐 Web SPA<br/><small>Vite · React · TS<br/>src/</small>"]:::client
+    Mob["📱 Mobile App<br/><small>Expo · React Native<br/>mobile/</small>"]:::client
+  end
+
+  subgraph EDGE["🛰️ AWS Edge — ap-south-1"]
+    direction LR
+    CF["CloudFront CDN<br/><small>SPA + /api/* proxy</small>"]:::edge
+    ALB["Application Load Balancer"]:::edge
+  end
+
+  subgraph VPC["🔒 VPC (multi-AZ) · ECS Fargate"]
+    API["⚙️ <b>Express API — modular monolith</b><br/>
+    <small>server/src/</small><br/>
+    <small>auth · users · providers · listings</small><br/>
+    <small>bookings · payments · guarantees · reviews</small><br/>
+    <small>chat · search · verification · notifications</small><br/>
+    <small>fraud · analytics · admin</small>"]:::compute
+  end
+
+  subgraph DATA["🗄️ Data layer"]
+    direction LR
+    RDS[("🐘 RDS Postgres 15<br/><small>+ RDS Proxy<br/>transactional SoT</small>")]:::data
+    Redis[("⚡ ElastiCache Redis<br/><small>slot locks · cache<br/>rate-limits</small>")]:::data
+    DDB[("📊 DynamoDB<br/><small>audit · fraud · search<br/>API logs · recs</small>")]:::data
+    OS[("🔎 OpenSearch 2.11<br/><small>listings/providers FTS</small>")]:::data
+    S3[("🪣 S3<br/><small>uploads · KYC<br/>backups</small>")]:::data
+  end
+
+  subgraph ASYNC["📨 Async / messaging"]
+    direction LR
+    SNS["SNS<br/><small>booking events</small>"]:::async
+    SQS["SQS + DLQ<br/><small>notif queue</small>"]:::async
+    SES["SES<br/><small>email</small>"]:::async
+    SNSsms["SNS SMS"]:::async
+  end
+
+  subgraph EXT["🌍 External / 3rd-party"]
+    direction LR
+    FB["🔥 Firebase Auth<br/><small>primary (Cognito swap)</small>"]:::ext
+    RZP["💳 Razorpay<br/><small>orders · webhooks</small>"]:::ext
+    Gem["🧠 Gemini 2.5-Flash<br/><small>OpenAI/Anthropic fallback</small>"]:::ext
+    GTTS["🗣️ Google Cloud TTS<br/><small>multilingual speech</small>"]:::ext
+    MP["📈 Mixpanel<br/><small>optional FE analytics</small>"]:::ext
+    DL["🪪 DigiLocker<br/><small>KYC (planned)</small>"]:::ext
+  end
+
+  SM["🔐 AWS Secrets Manager<br/><small>DB · JWT · Firebase · Razorpay · Gemini</small>"]:::secret
+
+  Web -- "HTTPS" --> CF
+  Mob -- "HTTPS /api" --> ALB
+  CF  -- "/api/*" --> ALB
+  ALB --> API
+
+  Web -. "auth SDK" .-> FB
+  Mob -. "auth SDK" .-> FB
+  API -- "verify token" --> FB
+
+  API --> RDS
+  API --> Redis
+  API --> DDB
+  API --> OS
+  API --> S3
+
+  API --> SNS --> SQS --> SES
+  SQS --> SNSsms
+
+  API -- "create order" --> RZP
+  RZP -. "webhook" .-> API
+
+  API --> Gem
+  API --> GTTS
+  Web -. "events" .-> MP
+  API -. "KYC (planned)" .-> DL
+
+  API -. "read at boot" .-> SM
+
+  classDef client  fill:#1e3a8a,stroke:#3b82f6,color:#e6eefc;
+  classDef edge    fill:#0c4a6e,stroke:#0ea5e9,color:#e6eefc;
+  classDef compute fill:#064e3b,stroke:#10b981,color:#e6eefc;
+  classDef data    fill:#78350f,stroke:#f59e0b,color:#fff7ed;
+  classDef async   fill:#4c1d95,stroke:#a78bfa,color:#ede9fe;
+  classDef ext     fill:#7f1d1d,stroke:#ef4444,color:#fee2e2;
+  classDef secret  fill:#334155,stroke:#64748b,color:#e2e8f0;
+
+  style CLIENTS fill:#0f1b35,stroke:#1f2a44
+  style EDGE    fill:#0f1b35,stroke:#1f2a44
+  style VPC     fill:#0f1b35,stroke:#1f2a44
+  style DATA    fill:#0f1b35,stroke:#1f2a44
+  style ASYNC   fill:#0f1b35,stroke:#1f2a44
+  style EXT     fill:#0f1b35,stroke:#1f2a44
+</pre>
+  </div>
+
+  <h2>Booking + payment sequence</h2>
+  <div class="card">
+<pre class="mermaid">
+%%{init: {"theme":"base","themeVariables":{"background":"#111a2e","primaryColor":"#1a2643","primaryTextColor":"#e6eefc","primaryBorderColor":"#3b5a92","lineColor":"#6b86b8","actorBkg":"#1e3a8a","actorTextColor":"#e6eefc","signalColor":"#8aa0c4","signalTextColor":"#e6eefc","labelBoxBkgColor":"#0c4a6e","labelTextColor":"#e6eefc","noteBkgColor":"#78350f","noteTextColor":"#fff7ed"}}}%%
+sequenceDiagram
+  autonumber
+  participant C as Client (Web/Mobile)
+  participant A as Express API
+  participant R as Redis
+  participant P as Postgres
+  participant Z as Razorpay
+  participant N as SNS→SQS→SES/SMS
+
+  C->>A: POST /api/bookings
+  A->>R: SETNX lock:slot (TTL 5m)
+  A->>P: BEGIN · check overlaps · INSERT booking · COMMIT
+  A-->>C: { bookingId }
+  C->>A: POST /api/payments/create
+  A->>Z: orders.create
+  A-->>C: { orderId }
+  C->>Z: Razorpay Checkout (pay)
+  Z-->>A: webhook (signed)
+  C->>A: POST /api/payments/verify
+  A->>P: BEGIN · payment=paid · booking=confirmed · guarantee · COMMIT
+  A->>R: DEL lock:slot
+  A-)N: publish booking.confirmed
+  A-->>C: { success }
+</pre>
+  </div>
+
+  <h2>How to read this</h2>
+  <div class="card" style="color:#c8d8f5; font-size:13px; line-height:1.55;">
+    <b>Traffic path.</b> Browser/app → <b>CloudFront</b> → (SPA assets or <code>/api/*</code> to <b>ALB</b>) → <b>ECS Fargate</b> running the Express monolith.<br/>
+    <b>State.</b> Postgres is the transactional source of truth; Redis provides distributed slot locks (prevents double-booking) and caching; DynamoDB stores append-only event streams; OpenSearch powers search; S3 holds user uploads and KYC docs.<br/>
+    <b>Async.</b> Booking events fan out via SNS → SQS (with DLQ) → SES / SNS-SMS so the API never blocks on delivery.<br/>
+    <b>External.</b> Firebase for auth (Cognito is swappable), Razorpay for payments with signed webhooks, Gemini 2.5 for AI onboarding (OpenAI/Anthropic configurable as fallback), Google Cloud TTS for speech, Mixpanel optional. DigiLocker KYC is wired but not yet integrated.<br/>
+    <b>Secrets.</b> Every credential (DB, JWT, Firebase admin, Razorpay, Gemini) is pulled from AWS Secrets Manager at boot — nothing lives in the image.
+  </div>
+</div>
+
+<script> mermaid.initialize({ startOnLoad: true, securityLevel: "loose" }); </script>
+</body>
+</html>

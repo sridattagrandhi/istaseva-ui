@@ -1,0 +1,2497 @@
+{
+  "generatedFrom": "license-checker --production",
+  "packages": [
+    {
+      "name": "@alloc/quick-lru",
+      "version": "5.2.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/sindresorhus/quick-lru"
+    },
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-present Sebastian McKenzie and other contributors",
+      "repository": "https://github.com/babel/babel"
+    },
+    {
+      "name": "@firebase/ai",
+      "version": "2.11.0",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/analytics",
+      "version": "0.10.21",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/analytics-compat",
+      "version": "0.2.27",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/analytics-types",
+      "version": "0.8.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/app",
+      "version": "0.14.11",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/app-check",
+      "version": "0.11.2",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/app-check-compat",
+      "version": "0.4.2",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/app-check-interop-types",
+      "version": "0.3.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/app-check-types",
+      "version": "0.5.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/app-compat",
+      "version": "0.5.11",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/app-types",
+      "version": "0.9.4",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/auth",
+      "version": "1.13.0",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/auth-compat",
+      "version": "0.6.5",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/auth-interop-types",
+      "version": "0.2.4",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/auth-types",
+      "version": "0.13.0",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/component",
+      "version": "0.7.2",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/data-connect",
+      "version": "0.6.0",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/database",
+      "version": "1.1.2",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/database-compat",
+      "version": "2.1.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/database-types",
+      "version": "1.0.19",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/firestore",
+      "version": "4.14.0",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/firestore-compat",
+      "version": "0.4.8",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/firestore-types",
+      "version": "3.0.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/functions",
+      "version": "0.13.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/functions-compat",
+      "version": "0.4.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/functions-types",
+      "version": "0.6.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/installations",
+      "version": "0.6.21",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/installations-compat",
+      "version": "0.2.21",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/installations-types",
+      "version": "0.5.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/logger",
+      "version": "0.5.0",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/messaging",
+      "version": "0.12.25",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/messaging-compat",
+      "version": "0.2.25",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/messaging-interop-types",
+      "version": "0.2.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/performance",
+      "version": "0.7.11",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/performance-compat",
+      "version": "0.2.24",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/performance-types",
+      "version": "0.2.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/remote-config",
+      "version": "0.8.2",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/remote-config-compat",
+      "version": "0.2.23",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/remote-config-types",
+      "version": "0.5.0",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/storage",
+      "version": "0.14.2",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/storage-compat",
+      "version": "0.4.2",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/storage-types",
+      "version": "0.8.3",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/util",
+      "version": "1.15.0",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@firebase/webchannel-wrapper",
+      "version": "1.0.5",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.7.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2021-present Floating UI contributors",
+      "repository": "https://github.com/floating-ui/floating-ui"
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.7.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2021-present Floating UI contributors",
+      "repository": "https://github.com/floating-ui/floating-ui"
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2021-present Floating UI contributors",
+      "repository": "https://github.com/floating-ui/floating-ui"
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.10",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2021-present Floating UI contributors",
+      "repository": "https://github.com/floating-ui/floating-ui"
+    },
+    {
+      "name": "@googlemaps/js-api-loader",
+      "version": "2.0.2",
+      "license": "Apache-2.0",
+      "copyright": "\"Licensor\" shall mean the copyright owner or entity authorized by",
+      "repository": "https://github.com/googlemaps/js-api-loader"
+    },
+    {
+      "name": "@grpc/grpc-js",
+      "version": "1.9.16",
+      "license": "Apache-2.0",
+      "copyright": "\"Licensor\" shall mean the copyright owner or entity authorized by",
+      "repository": "https://github.com/grpc/grpc-node/tree/master/packages/grpc-js"
+    },
+    {
+      "name": "@grpc/proto-loader",
+      "version": "0.7.15",
+      "license": "Apache-2.0",
+      "copyright": "\"Licensor\" shall mean the copyright owner or entity authorized by",
+      "repository": "https://github.com/grpc/grpc-node"
+    },
+    {
+      "name": "@hookform/resolvers",
+      "version": "3.10.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2019-present Beier(Bill) Luo",
+      "repository": "https://github.com/react-hook-form/resolvers"
+    },
+    {
+      "name": "@isaacs/cliui",
+      "version": "8.0.2",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2015, Contributors",
+      "repository": "https://github.com/yargs/cliui"
+    },
+    {
+      "name": "@jridgewell/gen-mapping",
+      "version": "0.3.5",
+      "license": "MIT",
+      "copyright": "Copyright 2022 Justin Ridgewell <jridgewell@google.com>",
+      "repository": "https://github.com/jridgewell/gen-mapping"
+    },
+    {
+      "name": "@jridgewell/resolve-uri",
+      "version": "3.1.2",
+      "license": "MIT",
+      "copyright": "Copyright 2019 Justin Ridgewell <jridgewell@google.com>",
+      "repository": "https://github.com/jridgewell/resolve-uri"
+    },
+    {
+      "name": "@jridgewell/set-array",
+      "version": "1.2.1",
+      "license": "MIT",
+      "copyright": "Copyright 2022 Justin Ridgewell <jridgewell@google.com>",
+      "repository": "https://github.com/jridgewell/set-array"
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.5.5",
+      "license": "MIT",
+      "copyright": "Copyright 2024 Justin Ridgewell <justin@ridgewell.name>",
+      "repository": "https://github.com/jridgewell/sourcemaps"
+    },
+    {
+      "name": "@jridgewell/trace-mapping",
+      "version": "0.3.25",
+      "license": "MIT",
+      "copyright": "Copyright 2022 Justin Ridgewell <justin@ridgewell.name>",
+      "repository": "https://github.com/jridgewell/trace-mapping"
+    },
+    {
+      "name": "@mapbox/jsonlint-lines-primitives",
+      "version": "2.0.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2012 Zachary Carter",
+      "repository": "https://github.com/mapbox/jsonlint"
+    },
+    {
+      "name": "@mapbox/point-geometry",
+      "version": "1.1.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2024, Mapbox",
+      "repository": "https://github.com/mapbox/point-geometry"
+    },
+    {
+      "name": "@mapbox/tiny-sdf",
+      "version": "2.2.0",
+      "license": "BSD-2-Clause",
+      "copyright": "Copyright (c) 2016-2024 Mapbox, Inc.",
+      "repository": "https://github.com/mapbox/tiny-sdf"
+    },
+    {
+      "name": "@mapbox/unitbezier",
+      "version": "0.0.1",
+      "license": "BSD-2-Clause",
+      "copyright": "Copyright (C) 2008 Apple Inc. All Rights Reserved.",
+      "repository": "https://github.com/mapbox/unitbezier"
+    },
+    {
+      "name": "@mapbox/unitbezier",
+      "version": "1.0.0",
+      "license": "BSD-2-Clause",
+      "copyright": "Copyright (C) 2008 Apple Inc. All Rights Reserved.",
+      "repository": "https://github.com/mapbox/unitbezier"
+    },
+    {
+      "name": "@mapbox/vector-tile",
+      "version": "2.0.5",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2024, Mapbox",
+      "repository": "https://github.com/mapbox/vector-tile-js"
+    },
+    {
+      "name": "@mapbox/whoots-js",
+      "version": "3.1.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2017, Mapbox",
+      "repository": "https://github.com/mapbox/whoots-js"
+    },
+    {
+      "name": "@maplibre/geojson-vt",
+      "version": "6.1.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2025 MapLibre contributors",
+      "repository": "https://github.com/maplibre/geojson-vt"
+    },
+    {
+      "name": "@maplibre/maplibre-gl-style-spec",
+      "version": "24.10.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2020, MapLibre contributors",
+      "repository": "https://github.com/maplibre/maplibre-style-spec"
+    },
+    {
+      "name": "@maplibre/mlt",
+      "version": "1.1.12",
+      "license": "(MIT OR Apache-2.0)",
+      "copyright": "Copyright (c) 2024 MapLibre contributors",
+      "repository": "https://github.com/maplibre/maplibre-tile-spec"
+    },
+    {
+      "name": "@maplibre/vt-pbf",
+      "version": "4.3.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2025 MapLibre contributors",
+      "repository": "https://github.com/maplibre/vt-pbf"
+    },
+    {
+      "name": "@nodelib/fs.scandir",
+      "version": "2.1.5",
+      "license": "MIT",
+      "copyright": "Copyright (c) Denis Malinochkin",
+      "repository": "https://github.com/nodelib/nodelib/tree/master/packages/fs/fs.scandir"
+    },
+    {
+      "name": "@nodelib/fs.stat",
+      "version": "2.0.5",
+      "license": "MIT",
+      "copyright": "Copyright (c) Denis Malinochkin",
+      "repository": "https://github.com/nodelib/nodelib/tree/master/packages/fs/fs.stat"
+    },
+    {
+      "name": "@nodelib/fs.walk",
+      "version": "1.2.8",
+      "license": "MIT",
+      "copyright": "Copyright (c) Denis Malinochkin",
+      "repository": "https://github.com/nodelib/nodelib/tree/master/packages/fs/fs.walk"
+    },
+    {
+      "name": "@pkgjs/parseargs",
+      "version": "0.11.0",
+      "license": "MIT",
+      "copyright": "\"Licensor\" shall mean the copyright owner or entity authorized by",
+      "repository": "https://github.com/pkgjs/parseargs"
+    },
+    {
+      "name": "@protobufjs/aspromise",
+      "version": "1.1.2",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/dcodeIO/protobuf.js"
+    },
+    {
+      "name": "@protobufjs/base64",
+      "version": "1.1.2",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/dcodeIO/protobuf.js"
+    },
+    {
+      "name": "@protobufjs/codegen",
+      "version": "2.0.5",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/dcodeIO/protobuf.js"
+    },
+    {
+      "name": "@protobufjs/eventemitter",
+      "version": "1.1.1",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/dcodeIO/protobuf.js"
+    },
+    {
+      "name": "@protobufjs/fetch",
+      "version": "1.1.1",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/dcodeIO/protobuf.js"
+    },
+    {
+      "name": "@protobufjs/float",
+      "version": "1.0.2",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/dcodeIO/protobuf.js"
+    },
+    {
+      "name": "@protobufjs/path",
+      "version": "1.1.2",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/dcodeIO/protobuf.js"
+    },
+    {
+      "name": "@protobufjs/pool",
+      "version": "1.1.0",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/dcodeIO/protobuf.js"
+    },
+    {
+      "name": "@protobufjs/utf8",
+      "version": "1.1.2",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/protobufjs/protobuf.js"
+    },
+    {
+      "name": "@radix-ui/number",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "version": "1.1.2",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-accordion",
+      "version": "1.2.11",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-alert-dialog",
+      "version": "1.1.14",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-arrow",
+      "version": "1.1.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-aspect-ratio",
+      "version": "1.1.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-avatar",
+      "version": "1.1.10",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-checkbox",
+      "version": "1.3.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-collapsible",
+      "version": "1.1.11",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-collection",
+      "version": "1.1.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.1.2",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-context-menu",
+      "version": "2.2.15",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-dialog",
+      "version": "1.1.14",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-direction",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.1.10",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-dropdown-menu",
+      "version": "2.1.15",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-focus-guards",
+      "version": "1.1.2",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-focus-scope",
+      "version": "1.1.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-hover-card",
+      "version": "1.1.14",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-label",
+      "version": "2.1.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-menu",
+      "version": "2.1.15",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-menubar",
+      "version": "1.1.15",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-navigation-menu",
+      "version": "1.2.13",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-popover",
+      "version": "1.1.14",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-popper",
+      "version": "1.2.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "version": "1.1.9",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-progress",
+      "version": "1.1.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-radio-group",
+      "version": "1.3.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-roving-focus",
+      "version": "1.1.10",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-scroll-area",
+      "version": "1.2.9",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-select",
+      "version": "2.2.5",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-separator",
+      "version": "1.1.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-slider",
+      "version": "1.3.5",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-switch",
+      "version": "1.2.5",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-tabs",
+      "version": "1.1.12",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-toast",
+      "version": "1.2.14",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-toggle",
+      "version": "1.1.9",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-toggle-group",
+      "version": "1.1.10",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-tooltip",
+      "version": "1.2.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.2.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-effect-event",
+      "version": "0.0.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-escape-keydown",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-is-hydrated",
+      "version": "0.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-previous",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-rect",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-size",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/react-visually-hidden",
+      "version": "1.2.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 WorkOS",
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@radix-ui/rect",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "name": "@remix-run/router",
+      "version": "1.23.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) React Training LLC 2015-2019",
+      "repository": "https://github.com/remix-run/react-router"
+    },
+    {
+      "name": "@tanstack/query-core",
+      "version": "5.83.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2021-present Tanner Linsley",
+      "repository": "https://github.com/TanStack/query"
+    },
+    {
+      "name": "@tanstack/react-query",
+      "version": "5.83.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2021-present Tanner Linsley",
+      "repository": "https://github.com/TanStack/query"
+    },
+    {
+      "name": "@types/d3-array",
+      "version": "3.2.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/d3-color",
+      "version": "3.1.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/d3-ease",
+      "version": "3.0.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/d3-interpolate",
+      "version": "3.0.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/d3-path",
+      "version": "3.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/d3-scale",
+      "version": "4.0.8",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/d3-shape",
+      "version": "3.1.6",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/d3-time",
+      "version": "3.0.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/d3-timer",
+      "version": "3.0.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/geojson",
+      "version": "7946.0.16",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/google.maps",
+      "version": "3.64.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/node",
+      "version": "22.16.5",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/prop-types",
+      "version": "15.7.13",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/react",
+      "version": "18.3.23",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@types/react-dom",
+      "version": "18.3.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "name": "@vis.gl/react-google-maps",
+      "version": "1.8.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2023 Vis.gl contributors",
+      "repository": "https://github.com/visgl/react-google-maps"
+    },
+    {
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/chalk/ansi-regex"
+    },
+    {
+      "name": "ansi-regex",
+      "version": "6.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "repository": "https://github.com/chalk/ansi-regex"
+    },
+    {
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/chalk/ansi-styles"
+    },
+    {
+      "name": "ansi-styles",
+      "version": "6.2.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "repository": "https://github.com/chalk/ansi-styles"
+    },
+    {
+      "name": "any-promise",
+      "version": "1.3.0",
+      "license": "MIT",
+      "copyright": "Copyright (C) 2014-2016 Kevin Beaty",
+      "repository": "https://github.com/kevinbeaty/any-promise"
+    },
+    {
+      "name": "anymatch",
+      "version": "3.1.3",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2019 Elan Shanker, Paul Miller (https://paulmillr.com)",
+      "repository": "https://github.com/micromatch/anymatch"
+    },
+    {
+      "name": "arg",
+      "version": "5.0.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2021 Vercel, Inc.",
+      "repository": "https://github.com/vercel/arg"
+    },
+    {
+      "name": "aria-hidden",
+      "version": "1.2.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017 Anton Korzunov",
+      "repository": "https://github.com/theKashey/aria-hidden"
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2013 Julian Gruber &lt;julian@juliangruber.com&gt;",
+      "repository": "https://github.com/juliangruber/balanced-match"
+    },
+    {
+      "name": "binary-extensions",
+      "version": "2.3.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "repository": "https://github.com/sindresorhus/binary-extensions"
+    },
+    {
+      "name": "brace-expansion",
+      "version": "2.1.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>",
+      "repository": "https://github.com/juliangruber/brace-expansion"
+    },
+    {
+      "name": "braces",
+      "version": "3.0.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-present, Jon Schlinkert.",
+      "repository": "https://github.com/micromatch/braces"
+    },
+    {
+      "name": "camelcase-css",
+      "version": "2.0.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Steven Vachon <contact@svachon.com> (svachon.com)",
+      "repository": "https://github.com/stevenvachon/camelcase-css"
+    },
+    {
+      "name": "chokidar",
+      "version": "3.6.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2012-2019 Paul Miller (https://paulmillr.com), Elan Shanker",
+      "repository": "https://github.com/paulmillr/chokidar"
+    },
+    {
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "license": "Apache-2.0",
+      "copyright": "\"Licensor\" shall mean the copyright owner or entity authorized by",
+      "repository": "https://github.com/joe-bell/cva"
+    },
+    {
+      "name": "cliui",
+      "version": "8.0.1",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2015, Contributors",
+      "repository": "https://github.com/yargs/cliui"
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)",
+      "repository": "https://github.com/lukeed/clsx"
+    },
+    {
+      "name": "cmdk",
+      "version": "1.1.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 Paco Coursey",
+      "repository": "https://github.com/pacocoursey/cmdk"
+    },
+    {
+      "name": "color-convert",
+      "version": "2.0.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>",
+      "repository": "https://github.com/Qix-/color-convert"
+    },
+    {
+      "name": "color-name",
+      "version": "1.1.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015 Dmitry Ivanov",
+      "repository": "https://github.com/colorjs/color-name"
+    },
+    {
+      "name": "commander",
+      "version": "4.1.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>",
+      "repository": "https://github.com/tj/commander.js"
+    },
+    {
+      "name": "cross-spawn",
+      "version": "7.0.6",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2018 Made With MOXY Lda <hello@moxy.studio>",
+      "repository": "https://github.com/moxystudio/node-cross-spawn"
+    },
+    {
+      "name": "cssesc",
+      "version": "3.0.0",
+      "license": "MIT",
+      "copyright": "Copyright Mathias Bynens <https://mathiasbynens.be/>",
+      "repository": "https://github.com/mathiasbynens/cssesc"
+    },
+    {
+      "name": "csstype",
+      "version": "3.1.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017-2018 Fredrik Nicol",
+      "repository": "https://github.com/frenic/csstype"
+    },
+    {
+      "name": "d3-array",
+      "version": "3.2.4",
+      "license": "ISC",
+      "copyright": "Copyright 2010-2023 Mike Bostock",
+      "repository": "https://github.com/d3/d3-array"
+    },
+    {
+      "name": "d3-color",
+      "version": "3.1.0",
+      "license": "ISC",
+      "copyright": "Copyright 2010-2022 Mike Bostock",
+      "repository": "https://github.com/d3/d3-color"
+    },
+    {
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright 2010-2021 Mike Bostock",
+      "repository": "https://github.com/d3/d3-ease"
+    },
+    {
+      "name": "d3-format",
+      "version": "3.1.0",
+      "license": "ISC",
+      "copyright": "Copyright 2010-2021 Mike Bostock",
+      "repository": "https://github.com/d3/d3-format"
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "license": "ISC",
+      "copyright": "Copyright 2010-2021 Mike Bostock",
+      "repository": "https://github.com/d3/d3-interpolate"
+    },
+    {
+      "name": "d3-path",
+      "version": "3.1.0",
+      "license": "ISC",
+      "copyright": "Copyright 2015-2022 Mike Bostock",
+      "repository": "https://github.com/d3/d3-path"
+    },
+    {
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "license": "ISC",
+      "copyright": "Copyright 2010-2021 Mike Bostock",
+      "repository": "https://github.com/d3/d3-scale"
+    },
+    {
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "license": "ISC",
+      "copyright": "Copyright 2010-2022 Mike Bostock",
+      "repository": "https://github.com/d3/d3-shape"
+    },
+    {
+      "name": "d3-time",
+      "version": "3.1.0",
+      "license": "ISC",
+      "copyright": "Copyright 2010-2022 Mike Bostock",
+      "repository": "https://github.com/d3/d3-time"
+    },
+    {
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "license": "ISC",
+      "copyright": "Copyright 2010-2021 Mike Bostock",
+      "repository": "https://github.com/d3/d3-time-format"
+    },
+    {
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "license": "ISC",
+      "copyright": "Copyright 2010-2021 Mike Bostock",
+      "repository": "https://github.com/d3/d3-timer"
+    },
+    {
+      "name": "date-fns",
+      "version": "3.6.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2021 Sasha Koss and Lesha Koss https://kossnocorp.mit-license.org",
+      "repository": "https://github.com/date-fns/date-fns"
+    },
+    {
+      "name": "decimal.js-light",
+      "version": "2.5.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2020 Michael Mclaughlin",
+      "repository": "https://github.com/MikeMcl/decimal.js-light"
+    },
+    {
+      "name": "detect-node-es",
+      "version": "1.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017 Ilya Kantor",
+      "repository": "https://github.com/thekashey/detect-node"
+    },
+    {
+      "name": "didyoumean",
+      "version": "1.2.2",
+      "license": "Apache-2.0",
+      "copyright": "didYouMean.js copyright (c) 2013 Dave Porter.",
+      "repository": "https://github.com/dcporter/didyoumean.js"
+    },
+    {
+      "name": "dlv",
+      "version": "1.1.3",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/developit/dlv"
+    },
+    {
+      "name": "dom-helpers",
+      "version": "5.2.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015 Jason Quense",
+      "repository": "https://github.com/react-bootstrap/dom-helpers"
+    },
+    {
+      "name": "earcut",
+      "version": "3.0.2",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2024, Mapbox",
+      "repository": "https://github.com/mapbox/earcut"
+    },
+    {
+      "name": "eastasianwidth",
+      "version": "0.2.0",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/komagata/eastasianwidth"
+    },
+    {
+      "name": "embla-carousel",
+      "version": "8.6.0",
+      "license": "MIT",
+      "copyright": "<sup>Embla Carousel - Copyright © 2019-present.</sup><br />",
+      "repository": "https://github.com/davidjerleke/embla-carousel"
+    },
+    {
+      "name": "embla-carousel-react",
+      "version": "8.6.0",
+      "license": "MIT",
+      "copyright": "<sup>Embla Carousel - Copyright © 2019-present.</sup><br />",
+      "repository": "https://github.com/davidjerleke/embla-carousel"
+    },
+    {
+      "name": "embla-carousel-reactive-utils",
+      "version": "8.6.0",
+      "license": "MIT",
+      "copyright": "<sup>Embla Carousel - Copyright © 2019-present.</sup><br />",
+      "repository": "https://github.com/davidjerleke/embla-carousel"
+    },
+    {
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "license": "MIT",
+      "copyright": "Copyright Mathias Bynens <https://mathiasbynens.be/>",
+      "repository": "https://github.com/mathiasbynens/emoji-regex"
+    },
+    {
+      "name": "emoji-regex",
+      "version": "9.2.2",
+      "license": "MIT",
+      "copyright": "Copyright Mathias Bynens <https://mathiasbynens.be/>",
+      "repository": "https://github.com/mathiasbynens/emoji-regex"
+    },
+    {
+      "name": "escalade",
+      "version": "3.2.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)",
+      "repository": "https://github.com/lukeed/escalade"
+    },
+    {
+      "name": "eventemitter3",
+      "version": "4.0.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014 Arnout Kazemier",
+      "repository": "https://github.com/primus/eventemitter3"
+    },
+    {
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017 Evgeny Poberezkin",
+      "repository": "https://github.com/epoberezkin/fast-deep-equal"
+    },
+    {
+      "name": "fast-equals",
+      "version": "5.2.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017 Tony Quetano",
+      "repository": "https://github.com/planttheidea/fast-equals"
+    },
+    {
+      "name": "fast-glob",
+      "version": "3.3.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) Denis Malinochkin",
+      "repository": "https://github.com/mrmlnc/fast-glob"
+    },
+    {
+      "name": "fastq",
+      "version": "1.17.1",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2015-2020, Matteo Collina <matteo.collina@gmail.com>",
+      "repository": "https://github.com/mcollina/fastq"
+    },
+    {
+      "name": "faye-websocket",
+      "version": "0.11.4",
+      "license": "Apache-2.0",
+      "copyright": "Copyright 2010-2021 James Coglan",
+      "repository": "https://github.com/faye/faye-websocket-node"
+    },
+    {
+      "name": "fill-range",
+      "version": "7.1.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-present, Jon Schlinkert.",
+      "repository": "https://github.com/jonschlinkert/fill-range"
+    },
+    {
+      "name": "firebase",
+      "version": "12.12.0",
+      "license": "Apache-2.0",
+      "copyright": null,
+      "repository": "https://github.com/firebase/firebase-js-sdk"
+    },
+    {
+      "name": "foreground-child",
+      "version": "3.3.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2015-2023 Isaac Z. Schlueter and Contributors",
+      "repository": "https://github.com/tapjs/foreground-child"
+    },
+    {
+      "name": "fsevents",
+      "version": "2.3.3",
+      "license": "MIT",
+      "copyright": "Copyright (C) 2010-2020 by Philipp Dunkel, Ben Noordhuis, Elan Shankar, Paul Miller",
+      "repository": "https://github.com/fsevents/fsevents"
+    },
+    {
+      "name": "function-bind",
+      "version": "1.1.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2013 Raynos.",
+      "repository": "https://github.com/Raynos/function-bind"
+    },
+    {
+      "name": "get-caller-file",
+      "version": "2.0.5",
+      "license": "ISC",
+      "copyright": "Copyright 2018 Stefan Penner",
+      "repository": "https://github.com/stefanpenner/get-caller-file"
+    },
+    {
+      "name": "get-nonce",
+      "version": "1.0.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2020 Anton Korzunov",
+      "repository": "https://github.com/theKashey/get-nonce"
+    },
+    {
+      "name": "gl-matrix",
+      "version": "3.4.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015-2025, Brandon Jones, Colin MacKenzie IV.",
+      "repository": "https://github.com/toji/gl-matrix"
+    },
+    {
+      "name": "glob",
+      "version": "10.5.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2009-2023 Isaac Z. Schlueter and Contributors",
+      "repository": "https://github.com/isaacs/node-glob"
+    },
+    {
+      "name": "glob-parent",
+      "version": "5.1.2",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2015, 2019 Elan Shanker",
+      "repository": "https://github.com/gulpjs/glob-parent"
+    },
+    {
+      "name": "glob-parent",
+      "version": "6.0.2",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2015, 2019 Elan Shanker, 2021 Blaine Bublitz <blaine.bublitz@gmail.com>, Eric Schoffstall <yo@contra.io> and other contributors",
+      "repository": "https://github.com/gulpjs/glob-parent"
+    },
+    {
+      "name": "hasown",
+      "version": "2.0.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) Jordan Harband and contributors",
+      "repository": "https://github.com/inspect-js/hasOwn"
+    },
+    {
+      "name": "html-parse-stringify",
+      "version": "3.0.1",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/henrikjoreteg/html-parse-stringify"
+    },
+    {
+      "name": "http-parser-js",
+      "version": "0.5.10",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015 Tim Caswell (https://github.com/creationix) and other",
+      "repository": "https://github.com/creationix/http-parser-js"
+    },
+    {
+      "name": "i18next",
+      "version": "26.0.6",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2011-present i18next",
+      "repository": "https://github.com/i18next/i18next"
+    },
+    {
+      "name": "i18next-browser-languagedetector",
+      "version": "8.2.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2025 i18next",
+      "repository": "https://github.com/i18next/i18next-browser-languageDetector"
+    },
+    {
+      "name": "idb",
+      "version": "7.1.1",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2016, Jake Archibald <jaffathecake@gmail.com>",
+      "repository": "https://github.com/jakearchibald/idb"
+    },
+    {
+      "name": "input-otp",
+      "version": "1.4.2",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/guilhermerodz/input-otp"
+    },
+    {
+      "name": "internmap",
+      "version": "2.0.3",
+      "license": "ISC",
+      "copyright": "Copyright 2021 Mike Bostock",
+      "repository": "https://github.com/mbostock/internmap"
+    },
+    {
+      "name": "is-binary-path",
+      "version": "2.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2019 Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Paul Miller (https://paulmillr.com)",
+      "repository": "https://github.com/sindresorhus/is-binary-path"
+    },
+    {
+      "name": "is-core-module",
+      "version": "2.15.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014 Dave Justice",
+      "repository": "https://github.com/inspect-js/is-core-module"
+    },
+    {
+      "name": "is-extglob",
+      "version": "2.1.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-2016, Jon Schlinkert",
+      "repository": "https://github.com/jonschlinkert/is-extglob"
+    },
+    {
+      "name": "is-fullwidth-code-point",
+      "version": "3.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/sindresorhus/is-fullwidth-code-point"
+    },
+    {
+      "name": "is-glob",
+      "version": "4.0.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-2017, Jon Schlinkert.",
+      "repository": "https://github.com/micromatch/is-glob"
+    },
+    {
+      "name": "is-number",
+      "version": "7.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-present, Jon Schlinkert.",
+      "repository": "https://github.com/jonschlinkert/is-number"
+    },
+    {
+      "name": "isexe",
+      "version": "2.0.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) Isaac Z. Schlueter and Contributors",
+      "repository": "https://github.com/isaacs/isexe"
+    },
+    {
+      "name": "jackspeak",
+      "version": "3.4.3",
+      "license": "BlueOak-1.0.0",
+      "copyright": "Copyright",
+      "repository": "https://github.com/isaacs/jackspeak"
+    },
+    {
+      "name": "jiti",
+      "version": "1.21.6",
+      "license": "MIT",
+      "copyright": "Copyright (c) Pooya Parsa <pooya@pi0.io>",
+      "repository": "https://github.com/unjs/jiti"
+    },
+    {
+      "name": "js-tokens",
+      "version": "4.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell",
+      "repository": "https://github.com/lydell/js-tokens"
+    },
+    {
+      "name": "json-stringify-pretty-compact",
+      "version": "4.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014, 2016, 2017, 2019, 2021, 2022 Simon Lydell",
+      "repository": "https://github.com/lydell/json-stringify-pretty-compact"
+    },
+    {
+      "name": "kdbush",
+      "version": "4.1.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2026, Vladimir Agafonkin",
+      "repository": "https://github.com/mourner/kdbush"
+    },
+    {
+      "name": "lilconfig",
+      "version": "3.1.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 Anton Kastritskiy",
+      "repository": "https://github.com/antonk52/lilconfig"
+    },
+    {
+      "name": "lines-and-columns",
+      "version": "1.2.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015 Brian Donovan",
+      "repository": "https://github.com/eventualbuddha/lines-and-columns"
+    },
+    {
+      "name": "lodash",
+      "version": "4.18.1",
+      "license": "MIT",
+      "copyright": "Copyright OpenJS Foundation and other contributors <https://openjsf.org/>",
+      "repository": "https://github.com/lodash/lodash"
+    },
+    {
+      "name": "lodash.camelcase",
+      "version": "4.3.0",
+      "license": "MIT",
+      "copyright": "Copyright jQuery Foundation and other contributors <https://jquery.org/>",
+      "repository": "https://github.com/lodash/lodash"
+    },
+    {
+      "name": "long",
+      "version": "5.3.2",
+      "license": "Apache-2.0",
+      "copyright": "\"Licensor\" shall mean the copyright owner or entity authorized by",
+      "repository": "https://github.com/dcodeIO/long.js"
+    },
+    {
+      "name": "loose-envify",
+      "version": "1.4.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015 Andres Suarez <zertosh@gmail.com>",
+      "repository": "https://github.com/zertosh/loose-envify"
+    },
+    {
+      "name": "lru-cache",
+      "version": "10.4.3",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2010-2023 Isaac Z. Schlueter and Contributors",
+      "repository": "https://github.com/isaacs/node-lru-cache"
+    },
+    {
+      "name": "lucide-react",
+      "version": "0.462.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2022 as part of Feather (MIT). All other copyright (c) for Lucide are held by Lucide Contributors 2022.",
+      "repository": "https://github.com/lucide-icons/lucide"
+    },
+    {
+      "name": "maplibre-gl",
+      "version": "5.24.0",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2023, MapLibre contributors",
+      "repository": "https://github.com/maplibre/maplibre-gl-js"
+    },
+    {
+      "name": "merge2",
+      "version": "1.4.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-2020 Teambition",
+      "repository": "https://github.com/teambition/merge2"
+    },
+    {
+      "name": "micromatch",
+      "version": "4.0.8",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-present, Jon Schlinkert.",
+      "repository": "https://github.com/micromatch/micromatch"
+    },
+    {
+      "name": "minimatch",
+      "version": "9.0.9",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2011-2023 Isaac Z. Schlueter and Contributors",
+      "repository": "https://github.com/isaacs/minimatch"
+    },
+    {
+      "name": "minimist",
+      "version": "1.2.8",
+      "license": "MIT",
+      "copyright": "The above copyright notice and this permission notice shall be included in all",
+      "repository": "https://github.com/minimistjs/minimist"
+    },
+    {
+      "name": "minipass",
+      "version": "7.1.2",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2017-2023 npm, Inc., Isaac Z. Schlueter, and Contributors",
+      "repository": "https://github.com/isaacs/minipass"
+    },
+    {
+      "name": "murmurhash-js",
+      "version": "1.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2011 Gary Court",
+      "repository": "https://github.com/mikolalysenko/murmurhash-js"
+    },
+    {
+      "name": "mz",
+      "version": "2.7.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-2016 Jonathan Ong me@jongleberry.com and Contributors",
+      "repository": "https://github.com/normalize/mz"
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.15",
+      "license": "MIT",
+      "copyright": "Copyright 2017 Andrey Sitnik <andrey@sitnik.ru>",
+      "repository": "https://github.com/ai/nanoid"
+    },
+    {
+      "name": "next-themes",
+      "version": "0.3.0",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/pacocoursey/next-themes"
+    },
+    {
+      "name": "normalize-path",
+      "version": "3.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-2018, Jon Schlinkert.",
+      "repository": "https://github.com/jonschlinkert/normalize-path"
+    },
+    {
+      "name": "object-assign",
+      "version": "4.1.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/sindresorhus/object-assign"
+    },
+    {
+      "name": "object-hash",
+      "version": "3.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014 object-hash contributors",
+      "repository": "https://github.com/puleos/object-hash"
+    },
+    {
+      "name": "package-json-from-dist",
+      "version": "1.0.1",
+      "license": "BlueOak-1.0.0",
+      "copyright": "Copyright",
+      "repository": "https://github.com/isaacs/package-json-from-dist"
+    },
+    {
+      "name": "path-key",
+      "version": "3.1.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/sindresorhus/path-key"
+    },
+    {
+      "name": "path-parse",
+      "version": "1.0.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015 Javier Blanco",
+      "repository": "https://github.com/jbgutierrez/path-parse"
+    },
+    {
+      "name": "path-scurry",
+      "version": "1.11.1",
+      "license": "BlueOak-1.0.0",
+      "copyright": "Copyright",
+      "repository": "https://github.com/isaacs/path-scurry"
+    },
+    {
+      "name": "pbf",
+      "version": "4.0.2",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2024, Mapbox",
+      "repository": "https://github.com/mapbox/pbf"
+    },
+    {
+      "name": "pbf",
+      "version": "5.1.0",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2026, Mapbox",
+      "repository": "https://github.com/mapbox/pbf"
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2021-2024 Oleksii Raspopov, Kostiantyn Denysov, Anton Verinov",
+      "repository": "https://github.com/alexeyraspopov/picocolors"
+    },
+    {
+      "name": "picomatch",
+      "version": "2.3.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017-present, Jon Schlinkert.",
+      "repository": "https://github.com/micromatch/picomatch"
+    },
+    {
+      "name": "pify",
+      "version": "2.3.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/sindresorhus/pify"
+    },
+    {
+      "name": "pirates",
+      "version": "4.0.6",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2016-2018 Ari Porad",
+      "repository": "https://github.com/danez/pirates"
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.17",
+      "license": "MIT",
+      "copyright": "Copyright 2013 Andrey Sitnik <andrey@sitnik.es>",
+      "repository": "https://github.com/postcss/postcss"
+    },
+    {
+      "name": "postcss-import",
+      "version": "15.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014 Maxime Thirouin, Jason Campbell & Kevin Mårtensson",
+      "repository": "https://github.com/postcss/postcss-import"
+    },
+    {
+      "name": "postcss-js",
+      "version": "4.0.1",
+      "license": "MIT",
+      "copyright": "Copyright 2015 Andrey Sitnik <andrey@sitnik.ru>",
+      "repository": "https://github.com/postcss/postcss-js"
+    },
+    {
+      "name": "postcss-load-config",
+      "version": "4.0.2",
+      "license": "MIT",
+      "copyright": "Copyright Michael Ciniawsky <michael.ciniawsky@gmail.com>",
+      "repository": "https://github.com/postcss/postcss-load-config"
+    },
+    {
+      "name": "postcss-nested",
+      "version": "6.2.0",
+      "license": "MIT",
+      "copyright": "Copyright 2014 Andrey Sitnik <andrey@sitnik.ru>",
+      "repository": "https://github.com/postcss/postcss-nested"
+    },
+    {
+      "name": "postcss-selector-parser",
+      "version": "6.1.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)",
+      "repository": "https://github.com/postcss/postcss-selector-parser"
+    },
+    {
+      "name": "postcss-value-parser",
+      "version": "4.2.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Bogdan Chadkin <trysound@yandex.ru>",
+      "repository": "https://github.com/TrySound/postcss-value-parser"
+    },
+    {
+      "name": "potpack",
+      "version": "2.1.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2025, Mapbox",
+      "repository": "https://github.com/mapbox/potpack"
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2013-present, Facebook, Inc.",
+      "repository": "https://github.com/facebook/prop-types"
+    },
+    {
+      "name": "protobufjs",
+      "version": "7.6.5",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2016, Daniel Wirtz  All rights reserved.",
+      "repository": "https://github.com/protobufjs/protobuf.js"
+    },
+    {
+      "name": "protocol-buffers-schema",
+      "version": "3.6.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014 Mathias Buus",
+      "repository": "https://github.com/mafintosh/protocol-buffers-schema"
+    },
+    {
+      "name": "qrcode.react",
+      "version": "4.2.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2015, Paul O’Shannessy",
+      "repository": "https://github.com/zpao/qrcode.react"
+    },
+    {
+      "name": "queue-microtask",
+      "version": "1.2.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) Feross Aboukhadijeh",
+      "repository": "https://github.com/feross/queue-microtask"
+    },
+    {
+      "name": "quickselect",
+      "version": "3.0.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2024, Vladimir Agafonkin",
+      "repository": "https://github.com/mourner/quickselect"
+    },
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Facebook, Inc. and its affiliates.",
+      "repository": "https://github.com/facebook/react"
+    },
+    {
+      "name": "react-day-picker",
+      "version": "8.10.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-2024 Giampaolo Bellavite <io@gpbl.dev> and contributors",
+      "repository": "https://github.com/gpbl/react-day-picker"
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Facebook, Inc. and its affiliates.",
+      "repository": "https://github.com/facebook/react"
+    },
+    {
+      "name": "react-hook-form",
+      "version": "7.61.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2019-present Beier(Bill) Luo",
+      "repository": "https://github.com/react-hook-form/react-hook-form"
+    },
+    {
+      "name": "react-i18next",
+      "version": "17.0.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015-present i18next",
+      "repository": "https://github.com/i18next/react-i18next"
+    },
+    {
+      "name": "react-is",
+      "version": "16.13.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Facebook, Inc. and its affiliates.",
+      "repository": "https://github.com/facebook/react"
+    },
+    {
+      "name": "react-is",
+      "version": "18.3.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Facebook, Inc. and its affiliates.",
+      "repository": "https://github.com/facebook/react"
+    },
+    {
+      "name": "react-remove-scroll",
+      "version": "2.7.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017 Anton Korzunov",
+      "repository": "https://github.com/theKashey/react-remove-scroll"
+    },
+    {
+      "name": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "license": "MIT",
+      "copyright": null,
+      "repository": "https://github.com/theKashey/react-remove-scroll-bar"
+    },
+    {
+      "name": "react-resizable-panels",
+      "version": "2.1.9",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2023 Brian Vaughn",
+      "repository": "https://github.com/bvaughn/react-resizable-panels"
+    },
+    {
+      "name": "react-router",
+      "version": "6.30.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) React Training LLC 2015-2019",
+      "repository": "https://github.com/remix-run/react-router"
+    },
+    {
+      "name": "react-router-dom",
+      "version": "6.30.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) React Training LLC 2015-2019",
+      "repository": "https://github.com/remix-run/react-router"
+    },
+    {
+      "name": "react-smooth",
+      "version": "4.0.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2016 recharts",
+      "repository": "https://github.com/recharts/react-smooth"
+    },
+    {
+      "name": "react-style-singleton",
+      "version": "2.2.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017 Anton Korzunov",
+      "repository": "https://github.com/theKashey/react-style-singleton"
+    },
+    {
+      "name": "react-transition-group",
+      "version": "4.4.5",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2018, React Community",
+      "repository": "https://github.com/reactjs/react-transition-group"
+    },
+    {
+      "name": "read-cache",
+      "version": "1.0.0",
+      "license": "MIT",
+      "copyright": "Copyright 2016 Bogdan Chadkin <trysound@yandex.ru>",
+      "repository": "https://github.com/TrySound/read-cache"
+    },
+    {
+      "name": "readdirp",
+      "version": "3.6.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com)",
+      "repository": "https://github.com/paulmillr/readdirp"
+    },
+    {
+      "name": "recharts",
+      "version": "2.15.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015-present recharts",
+      "repository": "https://github.com/recharts/recharts"
+    },
+    {
+      "name": "recharts-scale",
+      "version": "0.4.5",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015 Sen Yang",
+      "repository": "https://github.com/recharts/recharts-scale"
+    },
+    {
+      "name": "require-directory",
+      "version": "2.1.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2011 Troy Goode <troygoode@gmail.com>",
+      "repository": "https://github.com/troygoode/node-require-directory"
+    },
+    {
+      "name": "resolve",
+      "version": "1.22.8",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2012 James Halliday",
+      "repository": "https://github.com/browserify/resolve"
+    },
+    {
+      "name": "resolve-protobuf-schema",
+      "version": "2.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014 Mathias Buus",
+      "repository": "https://github.com/mafintosh/resolve-protobuf-schema"
+    },
+    {
+      "name": "reusify",
+      "version": "1.0.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015 Matteo Collina",
+      "repository": "https://github.com/mcollina/reusify"
+    },
+    {
+      "name": "run-parallel",
+      "version": "1.2.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Feross Aboukhadijeh",
+      "repository": "https://github.com/feross/run-parallel"
+    },
+    {
+      "name": "safe-buffer",
+      "version": "5.2.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Feross Aboukhadijeh",
+      "repository": "https://github.com/feross/safe-buffer"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.23.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) Facebook, Inc. and its affiliates.",
+      "repository": "https://github.com/facebook/react"
+    },
+    {
+      "name": "shebang-command",
+      "version": "2.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Kevin Mårtensson <kevinmartensson@gmail.com> (github.com/kevva)",
+      "repository": "https://github.com/kevva/shebang-command"
+    },
+    {
+      "name": "shebang-regex",
+      "version": "3.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/sindresorhus/shebang-regex"
+    },
+    {
+      "name": "signal-exit",
+      "version": "4.1.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors",
+      "repository": "https://github.com/tapjs/signal-exit"
+    },
+    {
+      "name": "sonner",
+      "version": "1.7.4",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2023 Emil Kowalski",
+      "repository": "https://github.com/emilkowalski/sonner"
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.1",
+      "license": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2009-2011, Mozilla Foundation and contributors",
+      "repository": "https://github.com/7rulnik/source-map-js"
+    },
+    {
+      "name": "string-width",
+      "version": "4.2.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/sindresorhus/string-width"
+    },
+    {
+      "name": "string-width",
+      "version": "5.1.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "repository": "https://github.com/sindresorhus/string-width"
+    },
+    {
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "repository": "https://github.com/chalk/strip-ansi"
+    },
+    {
+      "name": "strip-ansi",
+      "version": "7.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "repository": "https://github.com/chalk/strip-ansi"
+    },
+    {
+      "name": "sucrase",
+      "version": "3.35.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2012-2018 various contributors (see AUTHORS)",
+      "repository": "https://github.com/alangpierce/sucrase"
+    },
+    {
+      "name": "supports-preserve-symlinks-flag",
+      "version": "1.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2022 Inspect JS",
+      "repository": "https://github.com/inspect-js/node-supports-preserve-symlinks-flag"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "2.6.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2021 Dany Castillo",
+      "repository": "https://github.com/dcastil/tailwind-merge"
+    },
+    {
+      "name": "tailwindcss",
+      "version": "3.4.17",
+      "license": "MIT",
+      "copyright": "Copyright (c) Tailwind Labs, Inc.",
+      "repository": "https://github.com/tailwindlabs/tailwindcss"
+    },
+    {
+      "name": "tailwindcss-animate",
+      "version": "1.0.7",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2020 Jamie Kyle",
+      "repository": null
+    },
+    {
+      "name": "thenify",
+      "version": "3.3.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014-2016 Jonathan Ong me@jongleberry.com and contributors",
+      "repository": "https://github.com/thenables/thenify"
+    },
+    {
+      "name": "thenify-all",
+      "version": "1.6.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014 Jonathan Ong me@jongleberry.com",
+      "repository": "https://github.com/thenables/thenify-all"
+    },
+    {
+      "name": "tiny-invariant",
+      "version": "1.3.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2019 Alexander Reardon",
+      "repository": "https://github.com/alexreardon/tiny-invariant"
+    },
+    {
+      "name": "tinyqueue",
+      "version": "3.0.0",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2017, Vladimir Agafonkin",
+      "repository": "https://github.com/mourner/tinyqueue"
+    },
+    {
+      "name": "to-regex-range",
+      "version": "5.0.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2015-present, Jon Schlinkert.",
+      "repository": "https://github.com/micromatch/to-regex-range"
+    },
+    {
+      "name": "ts-interface-checker",
+      "version": "0.1.13",
+      "license": "Apache-2.0",
+      "copyright": "\"Licensor\" shall mean the copyright owner or entity authorized by",
+      "repository": "https://github.com/gristlabs/ts-interface-checker"
+    },
+    {
+      "name": "tslib",
+      "version": "2.8.1",
+      "license": "0BSD",
+      "copyright": "Copyright (c) Microsoft Corporation.",
+      "repository": "https://github.com/Microsoft/tslib"
+    },
+    {
+      "name": "typescript",
+      "version": "5.8.3",
+      "license": "Apache-2.0",
+      "copyright": "\"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.",
+      "repository": "https://github.com/microsoft/TypeScript"
+    },
+    {
+      "name": "undici-types",
+      "version": "6.21.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Matteo Collina and Undici contributors",
+      "repository": "https://github.com/nodejs/undici"
+    },
+    {
+      "name": "use-callback-ref",
+      "version": "1.3.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017 Anton Korzunov",
+      "repository": "https://github.com/theKashey/use-callback-ref"
+    },
+    {
+      "name": "use-sidecar",
+      "version": "1.1.3",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017 Anton Korzunov",
+      "repository": "https://github.com/theKashey/use-sidecar"
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.6.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Meta Platforms, Inc. and affiliates.",
+      "repository": "https://github.com/facebook/react"
+    },
+    {
+      "name": "util-deprecate",
+      "version": "1.0.2",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>",
+      "repository": "https://github.com/TooTallNate/util-deprecate"
+    },
+    {
+      "name": "vaul",
+      "version": "0.9.9",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2023 Emil Kowalski",
+      "repository": "https://github.com/emilkowalski/vaul"
+    },
+    {
+      "name": "victory-vendor",
+      "version": "36.9.2",
+      "license": "MIT AND ISC",
+      "copyright": null,
+      "repository": "https://github.com/FormidableLabs/victory"
+    },
+    {
+      "name": "void-elements",
+      "version": "3.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2014 hemanth",
+      "repository": "https://github.com/pugjs/void-elements"
+    },
+    {
+      "name": "web-vitals",
+      "version": "4.2.4",
+      "license": "Apache-2.0",
+      "copyright": "\"Licensor\" shall mean the copyright owner or entity authorized by",
+      "repository": "https://github.com/GoogleChrome/web-vitals"
+    },
+    {
+      "name": "websocket-driver",
+      "version": "0.7.4",
+      "license": "Apache-2.0",
+      "copyright": "Copyright 2010-2020 James Coglan",
+      "repository": "https://github.com/faye/websocket-driver-node"
+    },
+    {
+      "name": "websocket-extensions",
+      "version": "0.1.4",
+      "license": "Apache-2.0",
+      "copyright": "Copyright 2014-2020 James Coglan",
+      "repository": "https://github.com/faye/websocket-extensions-node"
+    },
+    {
+      "name": "which",
+      "version": "2.0.2",
+      "license": "ISC",
+      "copyright": "Copyright (c) Isaac Z. Schlueter and Contributors",
+      "repository": "https://github.com/isaacs/node-which"
+    },
+    {
+      "name": "wrap-ansi",
+      "version": "7.0.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "repository": "https://github.com/chalk/wrap-ansi"
+    },
+    {
+      "name": "wrap-ansi",
+      "version": "8.1.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "repository": "https://github.com/chalk/wrap-ansi"
+    },
+    {
+      "name": "y18n",
+      "version": "5.0.8",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2015, Contributors",
+      "repository": "https://github.com/yargs/y18n"
+    },
+    {
+      "name": "yaml",
+      "version": "2.9.0",
+      "license": "ISC",
+      "copyright": "Copyright Eemeli Aro <eemeli@gmail.com>",
+      "repository": "https://github.com/eemeli/yaml"
+    },
+    {
+      "name": "yargs",
+      "version": "17.7.2",
+      "license": "MIT",
+      "copyright": "Copyright 2010 James Halliday (mail@substack.net); Modified work Copyright 2014 Contributors (ben@npmjs.com)",
+      "repository": "https://github.com/yargs/yargs"
+    },
+    {
+      "name": "yargs-parser",
+      "version": "21.1.1",
+      "license": "ISC",
+      "copyright": "Copyright (c) 2016, Contributors",
+      "repository": "https://github.com/yargs/yargs-parser"
+    },
+    {
+      "name": "zod",
+      "version": "3.25.76",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2025 Colin McDonnell",
+      "repository": "https://github.com/colinhacks/zod"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Core service for local explicit-content checks.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+pillow>=10.0
+numpy>=1.24
+nudenet==3.4.2              # local ONNX explicit-content detector
+
+# --- Optional but RECOMMENDED for stronger NSFW detection ---
+# Falconsai/nsfw_image_detection ViT (~98% acc). Heavier (pulls torch).
+# Install with:  pip install -r requirements-nsfw.txt
+# Without it, the service uses NudeNet for explicit body-part detection.
+
+# --- Dev / test ---
+pytest>=8.0

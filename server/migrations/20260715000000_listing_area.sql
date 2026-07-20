@@ -1,0 +1,20 @@
+-- Neighbourhood / locality for a listing ("Kukatpally"), rendered ahead of
+-- city + state in the public location label so the 95 listings that all read
+-- "Mumbai, Maharashtra" become distinguishable on a card.
+--
+-- NULL is a normal, expected value — unlike city/state (see requireCityOrState
+-- in listings.service.ts) there is no guard, and the label degrades to exactly
+-- what shipped before this column existed. Area is only populated when the
+-- host's stated location was precise enough to derive one: forward-geocoding
+-- "Hyderabad, Telangana" returns no sublocality, so the label stays
+-- "Hyderabad, Telangana". The label must never claim more precision than the
+-- host actually gave us.
+--
+-- SOURCE RULE (load-bearing — see listing-geo-privacy.ts): this column is
+-- machine-derived from the Google `sublocality_level_1` address component
+-- ONLY. Never parse it out of the free-text `location`, which routinely holds
+-- a full street address (the WS6 leak, 2928560). The structured component is
+-- safe by construction: Google classifies roads as `route` and door numbers as
+-- `street_number`, so a sublocality can't carry either — "Tank Bund Rd,
+-- opposite Hussain Sagar, Hyderabad" resolves to sublocality "Khairtabad".
+ALTER TABLE public.listings ADD COLUMN IF NOT EXISTS area TEXT;

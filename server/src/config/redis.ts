@@ -1,0 +1,18 @@
+export {
+  redis,
+  connectRedis,
+  checkRedisHealth,
+  cacheGet,
+  cacheSet,
+  cacheDel,
+  acquireLock,
+  releaseLock,
+  getBookingHold,
+  setBookingHold,
+  releaseBookingHold,
+  getIdempotencyValue,
+  reserveIdempotencyKey,
+  setIdempotencyValue,
+  clearIdempotencyKey,
+  consumeRateLimit,
+} from '../common/cache/redis.js';

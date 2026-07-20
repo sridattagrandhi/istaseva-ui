@@ -1,0 +1,26 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "REPLACE_WITH_APPLE_TEAM_ID.com.istaseva.app",
+        "paths": ["/reset-password", "/reset-password/*"]
+      },
+      {
+        "appID": "REPLACE_WITH_APPLE_TEAM_ID.com.istaseva.app.staging",
+        "paths": ["/reset-password", "/reset-password/*"]
+      },
+      {
+        "appID": "REPLACE_WITH_APPLE_TEAM_ID.com.istaseva.app.dev",
+        "paths": ["/reset-password", "/reset-password/*"]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "REPLACE_WITH_APPLE_TEAM_ID.com.istaseva.app",
+      "REPLACE_WITH_APPLE_TEAM_ID.com.istaseva.app.staging",
+      "REPLACE_WITH_APPLE_TEAM_ID.com.istaseva.app.dev"
+    ]
+  }
+}

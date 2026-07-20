@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Aligned with src/redesign/client-redesign.css palette
+       bg #f6f6f8 / ink #17161c / muted #68707a / teal-dark #3a3247
+       saffron #bd8752 / warm-teal #8b5e4a / green-soft #f1ece9 */
+    --background: 240 11% 97%;
+    --foreground: 255 13% 10%;
+
+    --card: 240 20% 99%;
+    --card-foreground: 255 13% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 255 13% 10%;
+
+    --primary: 264 17% 23%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 28 42% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 24 18% 93%;
+    --muted-foreground: 217 7% 45%;
+
+    --accent: 17 30% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 158 64% 32%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 355 27% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 255 13% 88%;
+    --input: 255 13% 88%;
+    --ring: 17 30% 42%;
+
+    --radius: 0.5rem;
+
+    --primary-glow: 264 17% 38%;
+    --gradient-hero: linear-gradient(135deg, hsl(264 17% 23% / 0.08) 0%, hsl(28 42% 53% / 0.07) 50%, hsl(17 30% 42% / 0.05) 100%);
+    --shadow-card: 0 1px 3px 0 hsl(255 13% 10% / 0.04), 0 16px 44px -10px hsl(255 13% 10% / 0.08);
+    --shadow-card-hover: 0 8px 30px -4px hsl(264 17% 23% / 0.12), 0 4px 14px -2px hsl(255 13% 10% / 0.06);
+    --shadow-elevated: 0 28px 86px -12px hsl(255 13% 10% / 0.16);
+
+    --sidebar-background: 240 11% 97%;
+    --sidebar-foreground: 255 13% 18%;
+    --sidebar-primary: 264 17% 23%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 24 18% 93%;
+    --sidebar-accent-foreground: 255 13% 18%;
+    --sidebar-border: 255 13% 88%;
+    --sidebar-ring: 17 30% 42%;
+  }
+
+  .dark {
+    --background: 264 17% 8%;
+    --foreground: 240 20% 96%;
+    --card: 264 17% 12%;
+    --card-foreground: 240 20% 96%;
+    --popover: 264 17% 12%;
+    --popover-foreground: 240 20% 96%;
+    --primary: 28 42% 58%;
+    --primary-foreground: 264 17% 10%;
+    --secondary: 17 30% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 264 12% 18%;
+    --muted-foreground: 240 8% 70%;
+    --accent: 17 30% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 355 27% 45%;
+    --destructive-foreground: 240 20% 96%;
+    --border: 264 12% 22%;
+    --input: 264 12% 22%;
+    --ring: 28 42% 58%;
+    --sidebar-background: 264 17% 10%;
+    --sidebar-foreground: 240 20% 92%;
+    --sidebar-primary: 28 42% 58%;
+    --sidebar-primary-foreground: 264 17% 10%;
+    --sidebar-accent: 264 12% 18%;
+    --sidebar-accent-foreground: 240 20% 92%;
+    --sidebar-border: 264 12% 22%;
+    --sidebar-ring: 28 42% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    /* `clip` (not `hidden`) contains horizontal overflow WITHOUT turning html
+       into a scroll container — `hidden` promotes overflow-y to `auto`, which
+       silently breaks every `position: sticky` descendant (e.g. the /explore
+       map column). `clip` leaves overflow-y `visible` so sticky works. */
+    overflow-x: clip;
+    /* Reserve the vertical-scrollbar gutter permanently so Radix dialogs
+       (react-remove-scroll) removing the scrollbar no longer shifts every
+       centered `mx-auto` layout left/right by the scrollbar width. */
+    scrollbar-gutter: stable;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Safety net: decorative/sub-pixel overflow is clipped instead of
+       surfacing as a document-level horizontal scrollbar (esp. at 360px).
+       Use `clip`, not `hidden` — `hidden` makes body a scroll container
+       (overflow-y computes to `auto`) and breaks `position: sticky`. */
+    overflow-x: clip;
+    /* Uniformly WARM base — the old mid-stop (#f1f3f7, a cool blue-gray)
+       made the band behind the discovery carousels read as a gray box
+       under the frosted-white cards. Same warm family end to end now. */
+    background:
+      linear-gradient(180deg, hsl(264 17% 23% / 0.06) 0, hsl(264 17% 23% / 0) 430px),
+      linear-gradient(135deg, #faf9f7 0%, #f8f5f1 45%, #fbf7f3 100%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    @apply tracking-tight;
+  }
+  /* Redesign body class keeps its own ambient gradient (more pronounced) —
+     this default warm shell ensures the rest of the app feels cohesive too. */
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  }
+  .premium-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  .premium-shadow-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  /* Hide the scrollbar on horizontal chip/tab strips (content stays scrollable).
+     Referenced across the dashboard pages. */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
